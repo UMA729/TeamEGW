@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 23
-  productGUID: dd8af3b4871e2ee46b33a9a58b6c301e
+  productGUID: da546c232a3afa446ac55491bcc5da7f
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: aaa
+  productName: Uma_rhythm
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -756,10 +756,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 52f0464d-5ce8-42cb-a69f-245f494ab9bb
+  cloudProjectId: ad058fae-c526-4065-ad62-b235c837b2e5
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: aaa
+  projectName: Uma_rhythm
   organizationId: yuma_uma
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0

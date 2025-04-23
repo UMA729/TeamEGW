@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Team_Folder/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Team_Folder/Ega/title.unity
+    guid: d29e87522ee948f498b18b0f4aafbebb
   m_configObjects: {}

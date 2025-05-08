@@ -58,7 +58,7 @@ public class NotesManager : MonoBehaviour
             NoteType.Add(inputJson.notes[i].type);
 
             float x = NotesTime[i] * NotesSpeed;
-            NotesObj.Add(Instantiate(noteObj, new Vector3(inputJson.notes[i].block - x, 0.55f, 1.5f), Quaternion.identity));
+            NotesObj.Add(Instantiate(noteObj, new Vector3(inputJson.notes[i].block - x , 0.55f, 1.5f), Quaternion.identity));
         }
     }
 }

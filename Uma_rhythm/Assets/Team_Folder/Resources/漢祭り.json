@@ -2,13 +2,13 @@
   "name": "漢祭り",
   "maxBlock": 5,
   "BPM": 120,
-  "offset": -3,
+  "offset": -1,
   "notes": [
     {
       "LPB": 16,
       
       "num": 1,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },
@@ -16,105 +16,105 @@
       "LPB": 16,
       
       "num": 20,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },
     {
       "LPB": 16,
       "num": 24,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },
     {
       "LPB": 16,
       "num": 46,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },
     {
       "LPB": 16,
       "num": 47,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },
     {
       "LPB": 16,
       "num": 48,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },
     {
       "LPB": 16,
       "num": 49,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },
     {
       "LPB": 16,
       "num": 50,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },
     {
       "LPB": 16,
       "num": 51,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },
     {
       "LPB": 16,
       "num": 52,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },
     {
       "LPB": 16,
       "num": 53,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },
     {
       "LPB": 16,
       "num": 54,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },
     {
       "LPB": 16,
       "num": 56,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },
     {
       "LPB": 16,
       "num": 57,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },
     {
       "LPB": 16,
       "num": 59,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },
     {
       "LPB": 16,
       "num": 60,
-      "block": 3,
+      "block": 1,
       "type": 1,
       "notes": []
     },

@@ -5,21 +5,100 @@ using UnityEngine;
 
 public class Judge : MonoBehaviour
 {
-    [SerializeField] private GameObject messe_obj;
-    [SerializeField] NotesManager note_mana;
+    [SerializeField] private GameObject[] MessageObj;
+    [SerializeField] NotesManager notesManager;
 
+    [SerializeField] Renderer testobj = new Renderer();
+
+    private void Start()
+    {
+        notesManager = FindAnyObjectByType<NotesManager>();
+    }
     void Update()
     {
         if (Input.GetKeyDown("up") ||
             Input.GetKeyDown("down") ||
             Input.GetKeyDown("left") ||
-            Input.GetKeyDown("right")||
+            Input.GetKeyDown("right") ||
             Input.GetKeyDown(KeyCode.Space))
         {
-            if (note_mana.LaneNum[0] == 0)
+            if (notesManager.LaneNum[0] == 0)
             {
-
+                //Debug.Log("あ");
+                Judgement(GetABS(Time.time - notesManager.NotesTime[0]));
+            }
+            else if (notesManager.LaneNum[0] == 1)
+            {
+                Debug.Log("あ");
+                Judgement(GetABS(Time.time - notesManager.NotesTime[0]));
+            }
+            else if (notesManager.LaneNum[0] == 2)
+            {
+                Debug.Log("あ");
+                Judgement(GetABS(Time.time - notesManager.NotesTime[0]));
+            }
+            else if (notesManager.LaneNum[0] == 3)
+            {
+                //Debug.Log("あ");
+                Judgement(GetABS(Time.time - notesManager.NotesTime[0]));
             }
         }
+        if (Time.time > notesManager.NotesTime[0] + 0.2f)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
+        {
+            message(3);
+            deleteData();
+            Debug.Log("Miss");
+            //ミス
+            testobj.material.color = new Color(255,0,0);
+        }
+    }
+    void Judgement(float timeLag)
+    {
+        if (timeLag <= 0.10)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.1秒以下だったら
+        {
+            Debug.Log("Perfect");
+            message(0);
+            deleteData();
+        }
+        else
+        {
+            if (timeLag <= 0.15)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.15秒以下だったら
+            {
+                Debug.Log("Great");
+                message(1);
+                deleteData();
+            }
+            else
+            {
+                if (timeLag <= 0.20)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.2秒以下だったら
+                {
+                    Debug.Log("Good");
+                    message(2);
+                    deleteData();
+                }
+            }
+        }
+    }
+    float GetABS(float num)//引数の絶対値を返す関数
+    {
+        if (num >= 0)
+        {
+            return num;
+        }
+        else
+        {
+            return -num;
+        }
+    }
+    void deleteData()//すでにたたいたノーツを削除する関数
+    {
+        notesManager.NotesTime.RemoveAt(0);
+        notesManager.LaneNum.RemoveAt(0);
+        notesManager.NoteType.RemoveAt(0);
+    }
+
+    void message(int judge)//判定を表示する
+    {
+        Instantiate(MessageObj[judge], new Vector3(notesManager.LaneNum[0] - 1.5f, 0.76f, 0.15f), Quaternion.Euler(45, 0, 0));
     }
 }

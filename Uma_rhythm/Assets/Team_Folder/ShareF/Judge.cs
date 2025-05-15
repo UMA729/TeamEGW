@@ -8,14 +8,15 @@ public class Judge : MonoBehaviour
     [SerializeField] private GameObject[] MessageObj;
     [SerializeField] NotesManager notesManager;
 
-    [SerializeField] Renderer testobj = new Renderer();
-
+    public Transform testobjpos;
+    public GameObject testobj;
     private void Start()
     {
         notesManager = FindAnyObjectByType<NotesManager>();
     }
     void Update()
     {
+
         if (Input.GetKeyDown("up") ||
             Input.GetKeyDown("down") ||
             Input.GetKeyDown("left") ||
@@ -25,36 +26,35 @@ public class Judge : MonoBehaviour
             if (notesManager.LaneNum[0] == 0)
             {
                 //Debug.Log("あ");
-                Judgement(GetABS(Time.time - notesManager.NotesTime[0]));
+                Judgement(GetABS(Time.time - (notesManager.NotesTime[0]+GManager.instance.StartTime)));
             }
             else if (notesManager.LaneNum[0] == 1)
             {
                 Debug.Log("あ");
-                Judgement(GetABS(Time.time - notesManager.NotesTime[0]));
+                Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
             }
             else if (notesManager.LaneNum[0] == 2)
             {
                 Debug.Log("あ");
-                Judgement(GetABS(Time.time - notesManager.NotesTime[0]));
+                Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
             }
             else if (notesManager.LaneNum[0] == 3)
             {
                 //Debug.Log("あ");
-                Judgement(GetABS(Time.time - notesManager.NotesTime[0]));
+                Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
             }
         }
-        if (Time.time > notesManager.NotesTime[0] + 0.2f)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
+        if (Time.time > notesManager.NotesTime[0] + 0.2f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
         {
             message(3);
             deleteData();
             Debug.Log("Miss");
             //ミス
-            testobj.material.color = new Color(255,0,0);
         }
     }
     void Judgement(float timeLag)
     {
-        if (timeLag <= 0.10)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.1秒以下だったら
+        if (timeLag <= 0.10f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.1秒以下だったら
         {
             Debug.Log("Perfect");
             message(0);
@@ -62,7 +62,7 @@ public class Judge : MonoBehaviour
         }
         else
         {
-            if (timeLag <= 0.15)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.15秒以下だったら
+            if (timeLag <= 0.15f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.15秒以下だったら
             {
                 Debug.Log("Great");
                 message(1);
@@ -70,7 +70,7 @@ public class Judge : MonoBehaviour
             }
             else
             {
-                if (timeLag <= 0.20)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.2秒以下だったら
+                if (timeLag <= 0.20f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.2秒以下だったら
                 {
                     Debug.Log("Good");
                     message(2);

@@ -52,15 +52,15 @@ public class NotesManager : MonoBehaviour
         {
             float Note_interval = 60 / (inputJson.BPM * (float)inputJson.notes[i].LPB);
             float beatSec = Note_interval * (float)inputJson.notes[i].LPB;
-            float notesoffset = inputJson.offset * 0.01f;
-            float time = (beatSec * inputJson.notes[i].num / (float)inputJson.notes[i].LPB) + notesoffset;
+            float ntoffset = inputJson.offset * 0.01f;
+            float time = (beatSec * inputJson.notes[i].num / (float)inputJson.notes[i].LPB) + ntoffset;
 
             NotesTime.Add(time);
             LaneNum.Add(inputJson.notes[i].block);
             NoteType.Add(inputJson.notes[i].type);
 
             float x = NotesTime[i] * NotesSpeed;
-            NotesObj.Add(Instantiate(noteObj, new Vector3( x , 0.55f, 1.5f), Quaternion.identity));
+            NotesObj.Add(Instantiate(noteObj, new Vector3(x , 0.55f, 1.5f), Quaternion.identity));
         }
     }
 }

@@ -10,10 +10,18 @@ public class Notes : MonoBehaviour
         Application.targetFrameRate = 60; // 初期状態は-1になっている
     }
     //ノーツのスピードを設定
-    int NoteSpeed = 10;
+    int NoteSpeed = 5;
+    bool start;
     void Update()
     {
-        //ノーツを移動させる
-        transform.position -= transform.right * Time.deltaTime * NoteSpeed;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            start = true;
+        }
+        if (start)
+        {
+            //ノーツを移動させる
+            transform.position -= transform.right * Time.deltaTime * NoteSpeed;
+        }
     }
 }

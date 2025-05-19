@@ -52,7 +52,7 @@ public class NotesManager : MonoBehaviour
         {
             float Note_interval = 60 / (inputJson.BPM * (float)inputJson.notes[i].LPB);
             float beatSec = Note_interval * (float)inputJson.notes[i].LPB;
-            float ntoffset = inputJson.offset * 0.01f;
+            float ntoffset = inputJson.offset * 0.1f;
             float time = (beatSec * inputJson.notes[i].num / (float)inputJson.notes[i].LPB) + ntoffset;
 
             NotesTime.Add(time);

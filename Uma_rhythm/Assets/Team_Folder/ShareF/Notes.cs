@@ -10,7 +10,7 @@ public class Notes : MonoBehaviour
         Application.targetFrameRate = 60; // 初期状態は-1になっている
     }
     //ノーツのスピードを設定
-    int NoteSpeed = 5;
+    int NoteSpeed = 10;
     bool start;
     void Update()
     {

@@ -2,7 +2,7 @@
   "name": "漢祭り",
   "maxBlock": 4,
   "BPM": 120,
-  "offset": 20,
+  "offset": 100,
   "notes": [
     {
       "LPB": 4,

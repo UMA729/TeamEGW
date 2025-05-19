@@ -14,7 +14,7 @@ public class Notes : MonoBehaviour
     bool start;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             start = true;
         }

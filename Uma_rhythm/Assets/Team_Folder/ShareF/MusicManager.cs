@@ -11,21 +11,22 @@ public class MusicManager : MonoBehaviour
     void Start()
     {
         GManager.instance.Start = false;
-        songName = "äøç’ÇË";
-        audio = GetComponent<AudioSource>();
-        Music = (AudioClip)Resources.Load("Musics/" + songName);
+        //songName = "äøç’ÇË";
+        //audio = GetComponent<AudioSource>();
+        //Music = (AudioClip)Resources.Load("Musics/" + songName);
         played = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !played)
+        if (Input.GetKeyDown(KeyCode.S) && !played)
         {
             GManager.instance.Start = true;
             GManager.instance.StartTime = Time.time;
             played = true;
-            audio.PlayOneShot(Music);
+            //audio.PlayOneShot(Music);
         }
+        Debug.Log(GManager.instance.StartTime);
     }
 }

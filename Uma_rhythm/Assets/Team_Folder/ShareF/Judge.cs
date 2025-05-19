@@ -8,48 +8,46 @@ public class Judge : MonoBehaviour
     [SerializeField] private GameObject[] MessageObj;
     [SerializeField] NotesManager notesManager;
 
-    public Transform testobjpos;
-    public GameObject testobj;
-    private void Start()
-    {
-        notesManager = FindAnyObjectByType<NotesManager>();
-    }
     void Update()
     {
+        
 
-        if (Input.GetKeyDown("up") ||
-            Input.GetKeyDown("down") ||
-            Input.GetKeyDown("left") ||
-            Input.GetKeyDown("right") ||
-            Input.GetKeyDown(KeyCode.Space))
+        if (GManager.instance.Start)
         {
-            if (notesManager.LaneNum[0] == 0)
+            if (Input.GetKeyDown("up") ||
+                Input.GetKeyDown("down") ||
+                Input.GetKeyDown("left") ||
+                Input.GetKeyDown("right") ||
+                Input.GetKeyDown(KeyCode.Space))
             {
-                //Debug.Log("あ");
-                Judgement(GetABS(Time.time - (notesManager.NotesTime[0]+GManager.instance.StartTime)));
+                if (notesManager.LaneNum[0] == 0)
+                {
+                    //Debug.Log("あ");
+                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                }
+                if (notesManager.LaneNum[0] == 1)
+                {
+                    Debug.Log("あ");
+                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                }
+                if (notesManager.LaneNum[0] == 2)
+                {
+                    Debug.Log("あ");
+                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                }
+                if (notesManager.LaneNum[0] == 3)
+                {
+                    //Debug.Log("あ");
+                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                }
             }
-            else if (notesManager.LaneNum[0] == 1)
+            if (Time.time > notesManager.NotesTime[0] + 0.2f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
             {
-                Debug.Log("あ");
-                Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                message(3);
+                deleteData();
+                Debug.Log("Miss");
+                //ミス
             }
-            else if (notesManager.LaneNum[0] == 2)
-            {
-                Debug.Log("あ");
-                Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
-            }
-            else if (notesManager.LaneNum[0] == 3)
-            {
-                //Debug.Log("あ");
-                Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
-            }
-        }
-        if (Time.time > notesManager.NotesTime[0] + 0.2f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
-        {
-            message(3);
-            deleteData();
-            Debug.Log("Miss");
-            //ミス
         }
     }
     void Judgement(float timeLag)
@@ -99,6 +97,7 @@ public class Judge : MonoBehaviour
 
     void message(int judge)//判定を表示する
     {
-        Instantiate(MessageObj[judge], new Vector3(notesManager.LaneNum[0] - 1.5f, 0.76f, 0.15f), Quaternion.Euler(45, 0, 0));
+        Instantiate(MessageObj[judge],
+        new Vector3(notesManager.LaneNum[0] - 1.5f, 0.76f, 0.15f), Quaternion.Euler(45, 0, 0));
     }
 }

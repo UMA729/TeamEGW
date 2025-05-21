@@ -1,144 +1,43 @@
 ﻿{
   "name": "漢祭り",
-  "maxBlock": 5,
+  "maxBlock": 4,
   "BPM": 120,
-  "offset": -1,
+  "offset": 10,
   "notes": [
     {
-      "LPB": 16,
-      
+      "LPB": 4,
       "num": 1,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      
-      "num": 20,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      "num": 24,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      "num": 46,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      "num": 47,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      "num": 48,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      "num": 49,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      "num": 50,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      "num": 51,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      "num": 52,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      "num": 53,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      "num": 54,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      "num": 56,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      "num": 57,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      "num": 59,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      "num": 60,
-      "block": 1,
-      "type": 1,
-      "notes": []
-    },
-    {
-      "LPB": 16,
-      "num": 61,
       "block": 3,
       "type": 1,
       "notes": []
     },
     {
       "LPB": 4,
-      "num": 22,
+      "num": 4,
       "block": 3,
-      "type": 2,
-      "notes": [
-        {
-          "LPB": 4,
-          "num": 30,
-          "block": 3,
-          "type": 2,
-          "notes": []
-        }
-      ]
+      "type": 1,
+      "notes": []
+    },
+    {
+      "LPB": 4,
+      "num": 8,
+      "block": 3,
+      "type": 1,
+      "notes": []
+    },
+    {
+      "LPB": 4,
+      "num": 12,
+      "block": 3,
+      "type": 1,
+      "notes": []
+    },
+    {
+      "LPB": 4,
+      "num": 16,
+      "block": 3,
+      "type": 1,
+      "notes": []
     }
   ]
 }

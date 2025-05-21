@@ -10,34 +10,34 @@ public class Judge : MonoBehaviour
 
     void Update()
     {
-        
-
         if (GManager.instance.Start)
         {
-            if (Input.GetKeyDown("up") ||
-                Input.GetKeyDown("down") ||
-                Input.GetKeyDown("left") ||
-                Input.GetKeyDown("right") ||
-                Input.GetKeyDown(KeyCode.Space))
+
+            if (notesManager.NoteType[0] == 1)
             {
-                if (notesManager.LaneNum[0] == 0)
+                if (Input.GetKeyDown("up"))
                 {
-                    //Debug.Log("‚ ");
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                 }
-                if (notesManager.LaneNum[0] == 1)
+            }
+            if (notesManager.NoteType[0] == 2)
+            {
+                if (Input.GetKeyDown("left"))
                 {
-                    Debug.Log("‚ ");
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                 }
-                if (notesManager.LaneNum[0] == 2)
+            }
+            if (notesManager.NoteType[0] == 3)
+            {
+                if (Input.GetKeyDown("down"))
                 {
-                    Debug.Log("‚ ");
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                 }
-                if (notesManager.LaneNum[0] == 3)
+            }
+            if (notesManager.NoteType[0] == 4)
+            {
+                if (Input.GetKeyDown("right"))
                 {
-                    //Debug.Log("‚ ");
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                 }
             }
@@ -98,6 +98,6 @@ public class Judge : MonoBehaviour
     void message(int judge)//”»’è‚ð•\Ž¦‚·‚é
     {
         Instantiate(MessageObj[judge],
-        new Vector3(notesManager.LaneNum[0] - 1.5f, 0.76f, 0.15f), Quaternion.Euler(45, 0, 0));
+        new Vector3(0.5f, 1.5f, 1.0f), Quaternion.Euler(0, 0, 0));
     }
 }

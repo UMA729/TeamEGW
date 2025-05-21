@@ -10,8 +10,13 @@ public class Notes : MonoBehaviour
         Application.targetFrameRate = 60; // 初期状態は-1になっている
     }
     //ノーツのスピードを設定
-    int NoteSpeed = 10;
+    float NoteSpeed = 8;
     bool start;
+
+    void Start()
+    {
+        NoteSpeed = GManager.instance.noteSpeed;   
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.S))

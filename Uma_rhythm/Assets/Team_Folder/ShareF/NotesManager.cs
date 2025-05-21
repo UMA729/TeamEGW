@@ -32,10 +32,11 @@ public class NotesManager : MonoBehaviour
     public List<GameObject> NotesObj = new List<GameObject>();
 
     [SerializeField] private float NotesSpeed;
-    [SerializeField] GameObject noteObj;
+    [SerializeField] GameObject[] noteObj;
 
     void OnEnable()
     {
+        NotesSpeed = GManager.instance.noteSpeed;
         noteNum = 0;
         songName = "äøç’ÇË";
         Load(songName);
@@ -60,7 +61,15 @@ public class NotesManager : MonoBehaviour
             NoteType.Add(inputJson.notes[i].type);
 
             float x = NotesTime[i] * NotesSpeed;
-            NotesObj.Add(Instantiate(noteObj, new Vector3(x , 0.55f, 1.5f), Quaternion.identity));
+
+            if(NoteType[i]==1)
+            NotesObj.Add(Instantiate(noteObj[0], new Vector3(x , 0.55f, 1.5f), Quaternion.identity));
+            else if(NoteType[i]==2)
+            NotesObj.Add(Instantiate(noteObj[1], new Vector3(x , 0.55f, 1.5f), Quaternion.identity));
+            else if(NoteType[i]==3)
+            NotesObj.Add(Instantiate(noteObj[2], new Vector3(x , 0.55f, 1.5f), Quaternion.identity));
+            else if(NoteType[i]==4)
+            NotesObj.Add(Instantiate(noteObj[3], new Vector3(x , 0.55f, 1.5f), Quaternion.identity));
         }
     }
 }

@@ -11,9 +11,9 @@ public class MusicManager : MonoBehaviour
     void Start()
     {
         GManager.instance.Start = false;
-        //songName = "äøç’ÇË";
-        //audio = GetComponent<AudioSource>();
-        //Music = (AudioClip)Resources.Load("Musics/" + songName);
+        songName = "äøç’ÇË";
+        audio = GetComponent<AudioSource>();
+        Music = (AudioClip)Resources.Load("Music/" + songName);
         played = false;
     }
 
@@ -25,8 +25,7 @@ public class MusicManager : MonoBehaviour
             GManager.instance.Start = true;
             GManager.instance.StartTime = Time.time;
             played = true;
-            //audio.PlayOneShot(Music);
+            audio.PlayOneShot(Music);
         }
-        Debug.Log(GManager.instance.StartTime);
     }
 }

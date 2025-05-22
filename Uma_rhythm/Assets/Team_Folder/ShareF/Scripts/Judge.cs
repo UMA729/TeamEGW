@@ -8,6 +8,8 @@ public class Judge : MonoBehaviour
     [SerializeField] private GameObject[] MessageObj;
     [SerializeField] NotesManager notesManager;
 
+    int cnt = 0;
+
     void Update()
     {
         if (GManager.instance.Start)
@@ -18,7 +20,6 @@ public class Judge : MonoBehaviour
                 if (Input.GetKeyDown("up"))
                 {
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
-                    Destroy(notesManager.NotesObj[0]);
                 }
             }
             if (notesManager.NoteType[0] == 2)
@@ -26,7 +27,6 @@ public class Judge : MonoBehaviour
                 if (Input.GetKeyDown("left"))
                 {
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
-                    Destroy(notesManager.NotesObj[1]);
                 }
             }
             if (notesManager.NoteType[0] == 3)
@@ -34,7 +34,6 @@ public class Judge : MonoBehaviour
                 if (Input.GetKeyDown("down"))
                 {
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
-                    Destroy(notesManager.NotesObj[2]);
                 }
             }
             if (notesManager.NoteType[0] == 4)
@@ -42,7 +41,6 @@ public class Judge : MonoBehaviour
                 if (Input.GetKeyDown("right"))
                 {
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
-                    Destroy(notesManager.NotesObj[3]);
                 }
             }
             if (Time.time > notesManager.NotesTime[0] + 0.3f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
@@ -52,6 +50,7 @@ public class Judge : MonoBehaviour
                 Debug.Log("Miss");
                 //ミス
             }
+
         }
     }
     void Judgement(float timeLag)
@@ -97,6 +96,8 @@ public class Judge : MonoBehaviour
         notesManager.NotesTime.RemoveAt(0);
         notesManager.LaneNum.RemoveAt(0);
         notesManager.NoteType.RemoveAt(0);
+        Destroy(notesManager.NotesObj[cnt]);
+        cnt++;
     }
 
     void message(int judge)//判定を表示する

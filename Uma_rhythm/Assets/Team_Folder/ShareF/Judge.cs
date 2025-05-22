@@ -18,6 +18,7 @@ public class Judge : MonoBehaviour
                 if (Input.GetKeyDown("up"))
                 {
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    Destroy(notesManager.NotesObj[0]);
                 }
             }
             if (notesManager.NoteType[0] == 2)
@@ -25,6 +26,7 @@ public class Judge : MonoBehaviour
                 if (Input.GetKeyDown("left"))
                 {
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    Destroy(notesManager.NotesObj[1]);
                 }
             }
             if (notesManager.NoteType[0] == 3)
@@ -32,6 +34,7 @@ public class Judge : MonoBehaviour
                 if (Input.GetKeyDown("down"))
                 {
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    Destroy(notesManager.NotesObj[2]);
                 }
             }
             if (notesManager.NoteType[0] == 4)
@@ -39,6 +42,7 @@ public class Judge : MonoBehaviour
                 if (Input.GetKeyDown("right"))
                 {
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    Destroy(notesManager.NotesObj[3]);
                 }
             }
             if (Time.time > notesManager.NotesTime[0] + 0.3f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
@@ -97,7 +101,9 @@ public class Judge : MonoBehaviour
 
     void message(int judge)//判定を表示する
     {
-        Instantiate(MessageObj[judge],
+        GameObject Message= Instantiate(MessageObj[judge],
         new Vector3(0.5f, 1.5f, 1.0f), Quaternion.Euler(0, 0, 0));
+
+        Destroy(Message,1.0f);
     }
 }

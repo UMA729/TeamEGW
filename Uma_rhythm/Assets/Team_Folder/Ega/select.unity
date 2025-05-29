@@ -222,12 +222,66 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &482983306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 137040360546204167, guid: 168a16874e8aeb845a0ec68af742d5d7, type: 3}
+  m_PrefabInstance: {fileID: 961546044878966318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &482983308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 482983306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8afdd10dcafad9f4f88fb7b1333adc43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 70d3aa15567648d4e8f3979e30896a88, type: 3}
+--- !u!1 &749686465 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4176271927871212330, guid: 168a16874e8aeb845a0ec68af742d5d7, type: 3}
+  m_PrefabInstance: {fileID: 961546044878966318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &749686467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749686465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8afdd10dcafad9f4f88fb7b1333adc43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 70d3aa15567648d4e8f3979e30896a88, type: 3}
+--- !u!1 &866701200 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8852613978667632683, guid: 168a16874e8aeb845a0ec68af742d5d7, type: 3}
+  m_PrefabInstance: {fileID: 961546044878966318}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &866701202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866701200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8afdd10dcafad9f4f88fb7b1333adc43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 70d3aa15567648d4e8f3979e30896a88, type: 3}
 --- !u!1 &967243626 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 752015674165900910, guid: 168a16874e8aeb845a0ec68af742d5d7, type: 3}
   m_PrefabInstance: {fileID: 961546044878966318}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &967243629
+--- !u!114 &967243628
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -236,26 +290,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 967243626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Script: {fileID: 11500000, guid: 8afdd10dcafad9f4f88fb7b1333adc43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 0}
-          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-          m_MethodName: PlayOneShot
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 8300000, guid: 70d3aa15567648d4e8f3979e30896a88, type: 3}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+  hoverSound: {fileID: 8300000, guid: 70d3aa15567648d4e8f3979e30896a88, type: 3}
 --- !u!1 &1207290154
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +583,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 961546045220618020, guid: 168a16874e8aeb845a0ec68af742d5d7, type: 3}
+      propertyPath: m_Text
+      value: "\u30BF\u30A4\u30C8\u30EB"
+      objectReference: {fileID: 0}
+    - target: {fileID: 961546045220618023, guid: 168a16874e8aeb845a0ec68af742d5d7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4375
+      objectReference: {fileID: 0}
     - target: {fileID: 1299476859032963522, guid: 168a16874e8aeb845a0ec68af742d5d7, type: 3}
       propertyPath: m_Name
       value: home

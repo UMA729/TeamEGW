@@ -1,37 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class ButtonBGM : MonoBehaviour
 {
-    public Button myButton; // UIボタン
-    public AudioSource audioSource; // 効果音
-    public string nextSceneName; // 遷移先のシーン名
-
-    // Start is called before the first frame update
-    void Start()
+    public void OnPointerEnter(PointerEventData eventData)
     {
-        myButton.onClick.AddListener(OnButtonClick);
+        Debug.Log("マウスが" + gameObject.name + "に触れた");
+        // 何かしらの処理
     }
 
-    void OnButtonClick()
+    public void OnPointerExit(PointerEventData eventData)
     {
-        StartCoroutine(PlaySoundAndChangeScene());
-    }
-
-    IEnumerator PlaySoundAndChangeScene()
-    {
-        audioSource.Play(); // 効果音を再生
-        yield return new WaitForSeconds(audioSource.clip.length); // 効果音が終わるのを待つ
-        SceneManager.LoadScene(nextSceneName); // シーンを遷移
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("マウスが" + gameObject.name + "から離れた");
     }
 }

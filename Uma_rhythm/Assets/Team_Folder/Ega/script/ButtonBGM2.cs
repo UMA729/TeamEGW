@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ButtonBGM2 : MonoBehaviour, IPointerEnterHandler
+public class ButtonBGM2 : MonoBehaviour, IPointerEnterHandler ,IPointerExitHandler
 {
     public AudioClip hoverSound; // 再生する音声
     private AudioSource audioSource;
@@ -18,6 +18,7 @@ public class ButtonBGM2 : MonoBehaviour, IPointerEnterHandler
 
     public void OnPointerEnter(PointerEventData eventData)
     {
+        Debug.Log("マウスが" + gameObject.name + "に触れた");
         // 音声を再生
         if (hoverSound != null)
         {
@@ -25,9 +26,10 @@ public class ButtonBGM2 : MonoBehaviour, IPointerEnterHandler
         }
     }
 
+
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("カーソルがボタンから離れました！");
+        Debug.Log("マウスが" + gameObject.name + "から離れた");
         audioSource.Stop(); // ボタンからカーソルが離れたら音を停止
     }
 }

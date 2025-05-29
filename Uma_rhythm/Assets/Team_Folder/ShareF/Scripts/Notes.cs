@@ -19,7 +19,7 @@ public class Notes : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Time.time > 1.5f)
         {
             start = true;
         }

@@ -7,4 +7,5 @@ public class SongData : MonoBehaviour
 {
     public string SongID;
     public string SongName;
+    public Sprite SongImage;
 }

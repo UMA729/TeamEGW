@@ -43,9 +43,9 @@ public class Judge : MonoBehaviour
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                 }
             }
-            if (Time.time > notesManager.NotesTime[0] + 0.3f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
+            if (Time.time > notesManager.NotesTime[0] + 0.5f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
             {
-                message(3);
+                message(4);
                 deleteData();
                 Debug.Log("Miss");
                 //ミス
@@ -71,10 +71,16 @@ public class Judge : MonoBehaviour
             }
             else
             {
-                if (timeLag <= 0.30f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.2秒以下だったら
+                if(timeLag <= 0.30f)
+                {
+                    Debug.Log("Bad");
+                    message(2);
+                    deleteData();
+                }
+                if (timeLag <= 0.50f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.2秒以下だったら
                 {
                     Debug.Log("Good");
-                    message(2);
+                    message(3);
                     deleteData();
                 }
             }

@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a18362f3d5b3caa4c8f734484f9b5dd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rainPrefab: {fileID: 5590650283109390221, guid: fd552a778cbcb254190a0e9b383ef4ec, type: 3}
+  rainPrefab: {fileID: 1585383513362223695, guid: 799ee864025665a48832d7d2b3ab3641, type: 3}
 --- !u!4 &1994018244
 Transform:
   m_ObjectHideFlags: 0

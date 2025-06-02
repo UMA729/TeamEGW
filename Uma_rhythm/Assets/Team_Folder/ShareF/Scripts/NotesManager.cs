@@ -62,14 +62,11 @@ public class NotesManager : MonoBehaviour
 
             float x = NotesTime[i] * NotesSpeed;
 
-            if(NoteType[i]==1)
-            NotesObj.Add(Instantiate(noteObj[0], new Vector3(x , 0.55f, 1.5f), Quaternion.identity));
-            else if(NoteType[i]==2)
-            NotesObj.Add(Instantiate(noteObj[1], new Vector3(x , 0.55f, 1.5f), Quaternion.identity));
-            else if(NoteType[i]==3)
-            NotesObj.Add(Instantiate(noteObj[2], new Vector3(x , 0.55f, 1.5f), Quaternion.identity));
-            else if(NoteType[i]==4)
-            NotesObj.Add(Instantiate(noteObj[3], new Vector3(x , 0.55f, 1.5f), Quaternion.identity));
+            for (int j = 0; j < 12; j++)
+            {
+                if (NoteType[i] == j + 1)
+                    NotesObj.Add(Instantiate(noteObj[j], new Vector3(x, 0.55f, 1.5f), Quaternion.identity));
+            }
         }
     }
 }

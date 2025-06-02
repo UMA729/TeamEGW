@@ -22,7 +22,9 @@ public class GManager : MonoBehaviour
     public int miss;
     public void Awake()
     {
-        if(instance == null)
+        Application.targetFrameRate = 60; // ‰Šúó‘Ô‚Í-1‚É‚È‚Á‚Ä‚¢‚é
+
+        if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(this.gameObject);
@@ -31,5 +33,6 @@ public class GManager : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        
     }
 }

@@ -22,28 +22,29 @@ public class Judge : MonoBehaviour
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                 }
             }
-            if (notesManager.NoteType[0] == 2)
+            else if (notesManager.NoteType[0] == 2)
             {
                 if (Input.GetKeyDown("left"))
                 {
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                 }
             }
-            if (notesManager.NoteType[0] == 3)
+            else if (notesManager.NoteType[0] == 3)
             {
                 if (Input.GetKeyDown("down"))
                 {
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                 }
             }
-            if (notesManager.NoteType[0] == 4)
+            else if (notesManager.NoteType[0] == 4)
             {
                 if (Input.GetKeyDown("right"))
                 {
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                 }
             }
-            if (Time.time > notesManager.NotesTime[0] + 0.5f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
+
+            if (Time.time > notesManager.NotesTime[0] + 0.2f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
             {
                 message(4);
                 deleteData();
@@ -55,37 +56,36 @@ public class Judge : MonoBehaviour
     }
     void Judgement(float timeLag)
     {
-        if (timeLag <= 0.05f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.1秒以下だったら
+        if (timeLag <= 0.04f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.05秒以下だったら
         {
             Debug.Log("Perfect");
+            GManager.instance.perfect++;
             message(0);
             deleteData();
         }
-        else
+        else if (timeLag <= 0.08f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.15秒以下だったら
         {
-            if (timeLag <= 0.15f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.15秒以下だったら
-            {
-                Debug.Log("Great");
-                message(1);
-                deleteData();
-            }
-            else
-            {
-                if(timeLag <= 0.30f)
-                {
-                    Debug.Log("Bad");
-                    message(2);
-                    deleteData();
-                }
-                if (timeLag <= 0.50f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.2秒以下だったら
-                {
-                    Debug.Log("Good");
-                    message(3);
-                    deleteData();
-                }
-            }
+            Debug.Log("Great");
+            GManager.instance.great++;
+            message(1);
+            deleteData();
+        }
+        else if (timeLag <= 0.15f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.3秒以下だったら
+        {
+            Debug.Log("Good");
+            GManager.instance.good++;
+            message(2);
+            deleteData();
+        }
+        else if (timeLag <= 0.20f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.5秒以下だったら
+        {
+            Debug.Log("Bad");
+            GManager.instance.bad++;
+            message(3);
+            deleteData();
         }
     }
+    
     float GetABS(float num)//引数の絶対値を返す関数
     {
         if (num >= 0)

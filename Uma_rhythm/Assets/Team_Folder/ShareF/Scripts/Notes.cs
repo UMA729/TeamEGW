@@ -5,10 +5,7 @@ using UnityEngine;
 
 public class Notes : MonoBehaviour
 {
-    void Awake()
-    {
-        Application.targetFrameRate = 60; // 初期状態は-1になっている
-    }
+    
     //ノーツのスピードを設定
     float NoteSpeed = 8;
     bool start;

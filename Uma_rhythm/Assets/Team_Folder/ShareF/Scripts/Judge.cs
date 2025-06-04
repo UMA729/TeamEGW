@@ -10,6 +10,13 @@ public class Judge : MonoBehaviour
 
     int cnt = 0;
 
+    float end_time = 0.0f;
+
+    private void Start()
+    {
+        end_time = notesManager.NotesTime[notesManager.NotesTime.Count - 1];
+    }
+
     void Update()
     {
         if (GManager.instance.Start)
@@ -43,6 +50,8 @@ public class Judge : MonoBehaviour
                     Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                 }
             }
+
+
 
             if (Time.time > notesManager.NotesTime[0] + 0.15f + GManager.instance.StartTime)//–{—ˆƒm[ƒc‚ğ‚½‚½‚­‚×‚«ŠÔ‚©‚ç0.2•b‚½‚Á‚Ä‚à“ü—Í‚ª‚È‚©‚Á‚½ê‡
             {

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MusicManager : MonoBehaviour
 {
+    [SerializeField]SongDataBase dataBase;
     AudioSource audio;
     AudioClip Music;
     string songName;
@@ -11,7 +12,7 @@ public class MusicManager : MonoBehaviour
     void Start()
     {
         GManager.instance.Start = false;
-        songName = "äøç’ÇË";
+        songName = dataBase.SongDatas[GManager.instance.songID].SongName;
         audio = GetComponent<AudioSource>();
         Music = (AudioClip)Resources.Load("Music/" + songName);
         played = false;

@@ -44,7 +44,7 @@ public class Judge : MonoBehaviour
                 }
             }
 
-            if (Time.time > notesManager.NotesTime[0] + 0.22f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
+            if (Time.time > notesManager.NotesTime[0] + 0.15f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
             {
                 message(4);
                 deleteData();

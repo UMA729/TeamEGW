@@ -23,6 +23,8 @@ public class Note
 
 public class NotesManager : MonoBehaviour
 {
+    [SerializeField]SongDataBase dataBase;
+
     public int noteNum;
     private string songName;
 
@@ -38,7 +40,7 @@ public class NotesManager : MonoBehaviour
     {
         NotesSpeed = GManager.instance.noteSpeed;
         noteNum = 0;
-        songName = "Cheer_Up!";
+        songName = dataBase.SongDatas[GManager.instance.songID].SongName;
         Load(songName);
     }
 

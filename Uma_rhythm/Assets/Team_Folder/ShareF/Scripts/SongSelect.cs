@@ -2,6 +2,7 @@ using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class SongSelect : MonoBehaviour
@@ -9,71 +10,24 @@ public class SongSelect : MonoBehaviour
     [SerializeField] SongDataBase dataBase;
     [SerializeField] TextMeshProUGUI[] songNameText;
     [SerializeField] Image songImage;
+ 
+
+    public string songName;
+    public int ID;
 
     AudioSource audio;
-    AudioClip Music;
-    string songName;
-
-    int select;
+    string songname;
 
     // Start is called before the first frame update
     void Start()
     {
-        select = 0;
-        audio = GetComponent<AudioSource>();
-        songName = dataBase.SongDatas[select].SongName;
-        Music = (AudioClip)Resources.Load("/Music" + songName);
-        
+        songname = songName;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SongStart()
     {
-        if(Input.GetKeyDown("up"))
-        {
-            if (select < dataBase.SongDatas.Length)
-            {               
-            select++;
-            SongUpdateALL();
-            }
-        }  
-        if(Input.GetKeyDown("down"))
-        {
-            if (select > 0)
-            {               
-            select--;
-            SongUpdateALL();
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            
-        }
+        GManager.instance.songID = ID;
+        SceneManager.LoadScene(songname);
     }
-    void SongUpdateALL()
-    {
-        songName = dataBase.SongDatas[select].SongName;
-        Music = (AudioClip)Resources.Load("/Music" + songName);
-        audio.Stop();
-        audio.PlayOneShot(Music);
-        for(int i=0;i<5;i++)
-        {
-            SongStart(i - 2);
-        }
-    }
-    void SongStart(int id)
-    {
-        try
-        {
-            songNameText[id + 2].text = dataBase.SongDatas[select + id].SongName;
-        }
-        catch
-        {
-            songNameText[id + 2].text = "";
-        }
-        if(id == 0)
-        {
-            songImage.sprite = dataBase.SongDatas[select + id].SongImage;
-        }
-    }
+   
 }

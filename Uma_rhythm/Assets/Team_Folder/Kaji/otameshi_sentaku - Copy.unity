@@ -417,8 +417,8 @@ MonoBehaviour:
   dataBase: {fileID: 11400000, guid: 248cc9b68fecc8f479cd268ff3202da8, type: 2}
   songNameText: []
   songImage: {fileID: 0}
-  songName: "\u6F22\u796D\u308A"
-  ID: 2
+  songName: "\u80CC\u5F8C\u970A"
+  ID: 3
 --- !u!114 &1463930324
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/Team_Folder/Kaji/\u6F22\u796D\u308A.unity"
     guid: b81705c3571c6564cac66da32f595e1e
+  - enabled: 1
+    path: "Assets/Team_Folder/Ega/\u80CC\u5F8C\u970A.unity"
+    guid: 975e347789d7a844dba3ca2f2a1aa7d6
   m_configObjects: {}

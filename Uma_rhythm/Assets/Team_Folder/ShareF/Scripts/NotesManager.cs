@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 [Serializable]
 public class Data
 {
@@ -27,6 +27,8 @@ public class NotesManager : MonoBehaviour
 
     public int noteNum;
     private string songName;
+
+    public string testS;
 
     public List<int> LaneNum = new List<int>();
     public List<int> NoteType = new List<int>();

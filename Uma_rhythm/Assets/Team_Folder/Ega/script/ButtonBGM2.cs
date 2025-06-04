@@ -4,22 +4,22 @@ using UnityEngine.EventSystems;
 
 public class ButtonBGM2 : MonoBehaviour, IPointerEnterHandler ,IPointerExitHandler
 {
-    public AudioClip hoverSound; // Ä¶‚·‚é‰¹º
+    public AudioClip hoverSound; // å†ç”Ÿã™ã‚‹éŸ³å£°
     private AudioSource audioSource;
 
     void Start()
     {
-        // AudioSource‚ğæ“¾‚Ü‚½‚ÍƒAƒ^ƒbƒ`
+        // AudioSourceã‚’å–å¾—ã¾ãŸã¯ã‚¢ã‚¿ãƒƒãƒ
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
-        //audioSource.loop = false; // ƒ‹[ƒvÄ¶‚ğ—LŒø‰»
+        //audioSource.loop = false; // ãƒ«ãƒ¼ãƒ—å†ç”Ÿã‚’æœ‰åŠ¹åŒ–
         audioSource.clip = hoverSound;
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("ƒ}ƒEƒX‚ª" + gameObject.name + "‚ÉG‚ê‚½");
-        // ‰¹º‚ğÄ¶
+        Debug.Log("ãƒã‚¦ã‚¹ãŒ" + gameObject.name + "ã«è§¦ã‚ŒãŸ");
+        // éŸ³å£°ã‚’å†ç”Ÿ
         if (hoverSound != null)
         {
             audioSource.Play();
@@ -29,7 +29,7 @@ public class ButtonBGM2 : MonoBehaviour, IPointerEnterHandler ,IPointerExitHandl
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        Debug.Log("ƒ}ƒEƒX‚ª" + gameObject.name + "‚©‚ç—£‚ê‚½");
-        audioSource.Stop(); // ƒ{ƒ^ƒ“‚©‚çƒJ[ƒ\ƒ‹‚ª—£‚ê‚½‚ç‰¹‚ğ’â~
+        Debug.Log("ãƒã‚¦ã‚¹ãŒ" + gameObject.name + "ã‹ã‚‰é›¢ã‚ŒãŸ");
+        audioSource.Stop(); // ãƒœã‚¿ãƒ³ã‹ã‚‰ã‚«ãƒ¼ã‚½ãƒ«ãŒé›¢ã‚ŒãŸã‚‰éŸ³ã‚’åœæ­¢
     }
 }

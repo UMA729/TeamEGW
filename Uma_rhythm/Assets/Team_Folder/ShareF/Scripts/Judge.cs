@@ -60,6 +60,7 @@ public class Judge : MonoBehaviour
         {
             Debug.Log("Perfect");
             GManager.instance.perfect++;
+            GManager.instance.combo++;
             message(0);
             deleteData();
         }
@@ -67,6 +68,7 @@ public class Judge : MonoBehaviour
         {
             Debug.Log("Great");
             GManager.instance.great++;
+            GManager.instance.combo++;
             message(1);
             deleteData();
         }
@@ -74,6 +76,7 @@ public class Judge : MonoBehaviour
         {
             Debug.Log("Good");
             GManager.instance.good++;
+            GManager.instance.combo++;
             message(2);
             deleteData();
         }
@@ -81,6 +84,7 @@ public class Judge : MonoBehaviour
         {
             Debug.Log("Bad");
             GManager.instance.bad++;
+            GManager.instance.combo++;
             message(3);
             deleteData();
         }

@@ -266,5 +266,9 @@ PrefabInstance:
       propertyPath: testS
       value: "\u6F22\u796D\u308A"
       objectReference: {fileID: 0}
+    - target: {fileID: 1367734224508062685, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: resultScene
+      value: "\u30EA\u30B6\u30EB\u30C8"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee1c6b88ddcb83143808074111c29616, type: 3}

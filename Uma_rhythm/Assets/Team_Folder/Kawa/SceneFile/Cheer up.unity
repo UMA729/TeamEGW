@@ -214,6 +214,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1367734223158429632, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367734223158429632, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.44
+      objectReference: {fileID: 0}
     - target: {fileID: 1367734223802559299, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: m_Name
       value: StageBox
@@ -265,6 +273,10 @@ PrefabInstance:
     - target: {fileID: 1367734224118632654, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367734224508062685, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: resultScene
+      value: "\u30EA\u30B6\u30EB\u30C8"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee1c6b88ddcb83143808074111c29616, type: 3}

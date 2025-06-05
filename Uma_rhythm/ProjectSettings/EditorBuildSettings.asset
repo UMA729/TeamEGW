@@ -18,9 +18,18 @@ EditorBuildSettings:
     path: "Assets/Team_Folder/Ega/script/\u304A\u8A66\u3057.unity"
     guid: 709330905c1916946b2b6a183a718f52
   - enabled: 1
+    path: Assets/Team_Folder/Ishi/rodeo.unity
+    guid: 7baf2cdedd17bff489ab37d5cac11d0b
+  - enabled: 1
+    path: Assets/Team_Folder/Kawa/SceneFile/Cheer up.unity
+    guid: 8897606210a97834e86a4b1c5b349660
+  - enabled: 1
     path: "Assets/Team_Folder/Kaji/\u6F22\u796D\u308A.unity"
     guid: b81705c3571c6564cac66da32f595e1e
   - enabled: 1
     path: "Assets/Team_Folder/Ega/\u80CC\u5F8C\u970A.unity"
     guid: 975e347789d7a844dba3ca2f2a1aa7d6
+  - enabled: 1
+    path: "Assets/Team_Folder/Ishi/\u30EA\u30B6\u30EB\u30C8.unity"
+    guid: cb0ed26d89d72d041ba3ba0b9beb4395
   m_configObjects: {}

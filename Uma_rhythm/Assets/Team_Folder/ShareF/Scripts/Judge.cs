@@ -2,11 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Judge : MonoBehaviour
 {
     [SerializeField] private GameObject[] MessageObj;
     [SerializeField] NotesManager notesManager;
+    public string resultScene;
 
     int cnt = 0;
 
@@ -51,7 +53,10 @@ public class Judge : MonoBehaviour
                 }
             }
 
-
+            if (Time.time > end_time + GManager.instance.StartTime)
+            {
+                Invoke("Result", 2f);//ノーツの終わり2秒後にリザルト関数へ
+            }
 
             if (Time.time > notesManager.NotesTime[0] + 0.15f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
             {
@@ -125,5 +130,10 @@ public class Judge : MonoBehaviour
         new Vector3(0.5f, 1.5f, 1.0f), Quaternion.Euler(0, 0, 0));
 
         Destroy(Message,1.0f);
+    }
+
+    void Result()
+    {
+        SceneManager.LoadScene(resultScene);//リザルトシーンへ移動
     }
 }

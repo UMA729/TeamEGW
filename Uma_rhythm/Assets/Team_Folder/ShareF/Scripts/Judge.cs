@@ -55,6 +55,7 @@ public class Judge : MonoBehaviour
 
             if (Time.time > end_time + GManager.instance.StartTime)
             {
+                Debug.Log("aiueo");
                 Invoke("Result", 2f);//ノーツの終わり2秒後にリザルト関数へ
             }
 

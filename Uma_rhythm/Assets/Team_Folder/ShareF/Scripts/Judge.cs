@@ -56,7 +56,7 @@ public class Judge : MonoBehaviour
             if (Time.time > end_time + GManager.instance.StartTime)
             {
                 Debug.Log("aiueo");
-                Invoke("Result", 2f);//ノーツの終わり2秒後にリザルト関数へ
+                Invoke("Result", 4f);//ノーツの終わり2秒後にリザルト関数へ
             }
 
             if (Time.time > notesManager.NotesTime[0] + 0.15f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
@@ -71,7 +71,7 @@ public class Judge : MonoBehaviour
     }
     void Judgement(float timeLag)
     {
-        if (timeLag <= 0.04f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.05秒以下だったら
+        if (timeLag <= 0.06f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.05秒以下だったら
         {
             Debug.Log("Perfect");
             GManager.instance.perfect++;
@@ -79,15 +79,15 @@ public class Judge : MonoBehaviour
             message(0);
             deleteData();
         }
-        else if (timeLag <= 0.08f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.15秒以下だったら
-        {
-            Debug.Log("Great");
-            GManager.instance.great++;
-            GManager.instance.combo++;
-            message(1);
-            deleteData();
-        }
-        else if (timeLag <= 0.15f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.3秒以下だったら
+        //else if (timeLag <= 0.08f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.15秒以下だったら
+        //{
+        //    Debug.Log("Great");
+        //    GManager.instance.great++;
+        //    GManager.instance.combo++;
+        //    message(1);
+        //    deleteData();
+        //}
+        else if (timeLag <= 0.10f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.3秒以下だったら
         {
             Debug.Log("Good");
             GManager.instance.good++;
@@ -95,7 +95,7 @@ public class Judge : MonoBehaviour
             message(2);
             deleteData();
         }
-        else if (timeLag <= 0.18f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.5秒以下だったら
+        else if (timeLag <= 0.24f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.5秒以下だったら
         {
             Debug.Log("Bad");
             GManager.instance.bad++;
@@ -121,6 +121,7 @@ public class Judge : MonoBehaviour
         notesManager.NotesTime.RemoveAt(0);
         notesManager.LaneNum.RemoveAt(0);
         notesManager.NoteType.RemoveAt(0);
+
         Destroy(notesManager.NotesObj[cnt]);
         cnt++;
     }
@@ -130,7 +131,7 @@ public class Judge : MonoBehaviour
         GameObject Message= Instantiate(MessageObj[judge],
         new Vector3(0.5f, 1.5f, 1.0f), Quaternion.Euler(0, 0, 0));
 
-        Destroy(Message,1.0f);
+        Destroy(Message,0.5f);
     }
 
     void Result()

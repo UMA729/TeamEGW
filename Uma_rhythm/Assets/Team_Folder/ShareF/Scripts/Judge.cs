@@ -66,6 +66,8 @@ public class Judge : MonoBehaviour
                 Debug.Log("Miss");
                 //É~ÉX
             }
+            Debug.Log(end_time);
+            Debug.Log(Time.time);
 
         }
     }

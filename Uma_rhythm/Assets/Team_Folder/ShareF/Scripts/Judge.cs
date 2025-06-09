@@ -23,40 +23,77 @@ public class Judge : MonoBehaviour
     {
         if (GManager.instance.Start)
         {
+            if(Input.GetKey(KeyCode.Space))
+            {
+               
+                if (notesManager.NoteType[0] == 5)
+                {
+                    {
+                        if (Input.GetKeyDown("up"))
+                            Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    }
+                }
+                else if (notesManager.NoteType[0] == 6)
+                {
+                    {
+                        if (Input.GetKeyDown("left"))
+                            Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    }
+                }
+                else if (notesManager.NoteType[0] == 7)
+                {
+                    {
+                        if (Input.GetKeyDown("down"))
+                            Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
 
-            if (notesManager.NoteType[0] == 1)
-            {
-                if (Input.GetKeyDown("up"))
+                    }
+                }
+                else if (notesManager.NoteType[0] == 8)
                 {
-                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    {
+                        if (Input.GetKeyDown("right"))
+                            Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+
+                    }
                 }
             }
-            else if (notesManager.NoteType[0] == 2)
+            else
             {
-                if (Input.GetKeyDown("left"))
+                if (notesManager.NoteType[0] == 1)
                 {
-                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    if (Input.GetKeyDown("up"))
+                    {
+                        Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    }
                 }
-            }
-            else if (notesManager.NoteType[0] == 3)
-            {
-                if (Input.GetKeyDown("down"))
+                else if (notesManager.NoteType[0] == 2)
                 {
-                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    if (Input.GetKeyDown("left"))
+                    {
+                        Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    }
                 }
-            }
-            else if (notesManager.NoteType[0] == 4)
-            {
-                if (Input.GetKeyDown("right"))
+                else if (notesManager.NoteType[0] == 3)
                 {
-                    Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    if (Input.GetKeyDown("down"))
+                    {
+                        Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    }
+                }
+                else if (notesManager.NoteType[0] == 4)
+                {
+                    if (Input.GetKeyDown("right"))
+                    {
+                        Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    }
                 }
             }
 
             if (Time.time > end_time + GManager.instance.StartTime)
             {
                 Debug.Log("aiueo");
-                Invoke("Result", 4f);//ノーツの終わり2秒後にリザルト関数へ
+                Invoke("Result", 2f);//ノーツの終わり2秒後にリザルト関数へ
+                return;
             }
 
             if (Time.time > notesManager.NotesTime[0] + 0.15f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
@@ -66,8 +103,9 @@ public class Judge : MonoBehaviour
                 Debug.Log("Miss");
                 //ミス
             }
-            Debug.Log(end_time);
-            Debug.Log(Time.time);
+
+            //Debug.Log("エンドタイム"+end_time);
+            //Debug.Log("現在時間"+Time.deltaTime);
 
         }
     }
@@ -120,11 +158,14 @@ public class Judge : MonoBehaviour
     }
     void deleteData()//すでにたたいたノーツを削除する関数
     {
+        if (notesManager.NoteType[0] < 5)
+        {
+            Debug.Log(notesManager.NoteType[0]);
+            Destroy(notesManager.NotesObj[cnt]);
+        }
         notesManager.NotesTime.RemoveAt(0);
         notesManager.LaneNum.RemoveAt(0);
         notesManager.NoteType.RemoveAt(0);
-
-        Destroy(notesManager.NotesObj[cnt]);
         cnt++;
     }
 

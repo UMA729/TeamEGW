@@ -266,6 +266,42 @@ PrefabInstance:
       propertyPath: testS
       value: "\u6F22\u796D\u308A"
       objectReference: {fileID: 0}
+    - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: noteObj.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: noteObj.Array.data[0]
+      value: 
+      objectReference: {fileID: 97148699284654359, guid: 7303ebaa67248c84497c1495ccccb2ce, type: 3}
+    - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: noteObj.Array.data[1]
+      value: 
+      objectReference: {fileID: 97148699284654359, guid: f22d6d8c850e34b4fa8749faf1a9d8df, type: 3}
+    - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: noteObj.Array.data[2]
+      value: 
+      objectReference: {fileID: 97148699284654359, guid: b1376c57f96b7604e92fe0dd117784c7, type: 3}
+    - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: noteObj.Array.data[3]
+      value: 
+      objectReference: {fileID: 97148699284654359, guid: f03f460c85e4d70469ed7a3b523a4bc9, type: 3}
+    - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: noteObj.Array.data[4]
+      value: 
+      objectReference: {fileID: 7248790559224589285, guid: 8bbe357caffc33f45ac5e9133cb92f37, type: 3}
+    - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: noteObj.Array.data[5]
+      value: 
+      objectReference: {fileID: 1204664130713795287, guid: 54ceb42be0b423e4ab3c53176a6ee0f0, type: 3}
+    - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: noteObj.Array.data[6]
+      value: 
+      objectReference: {fileID: 934034832555793877, guid: b9b8677d8cd663e48b913a3f4eb86881, type: 3}
+    - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: noteObj.Array.data[7]
+      value: 
+      objectReference: {fileID: 8008300175095278611, guid: 8b30cae1f8e1b494c867563b2f523ea8, type: 3}
     - target: {fileID: 1367734224508062685, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: resultScene
       value: "\u30EA\u30B6\u30EB\u30C8"

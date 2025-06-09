@@ -255,6 +255,7 @@ MonoBehaviour:
   dataBase: {fileID: 11400000, guid: 248cc9b68fecc8f479cd268ff3202da8, type: 2}
   songNameText: []
   songImage: {fileID: 0}
+  notesonj_set: []
   songName: "\u80CC\u5F8C\u970A"
   ID: 3
 --- !u!1 &749686465 stripped
@@ -290,6 +291,11 @@ MonoBehaviour:
   dataBase: {fileID: 11400000, guid: 248cc9b68fecc8f479cd268ff3202da8, type: 2}
   songNameText: []
   songImage: {fileID: 0}
+  notesonj_set:
+  - {fileID: 97148699284654359, guid: 7303ebaa67248c84497c1495ccccb2ce, type: 3}
+  - {fileID: 97148699284654359, guid: f22d6d8c850e34b4fa8749faf1a9d8df, type: 3}
+  - {fileID: 97148699284654359, guid: b1376c57f96b7604e92fe0dd117784c7, type: 3}
+  - {fileID: 97148699284654359, guid: f03f460c85e4d70469ed7a3b523a4bc9, type: 3}
   songName: "\u6F22\u796D\u308A"
   ID: 2
 --- !u!1 &866701200 stripped
@@ -325,6 +331,7 @@ MonoBehaviour:
   dataBase: {fileID: 11400000, guid: 248cc9b68fecc8f479cd268ff3202da8, type: 2}
   songNameText: []
   songImage: {fileID: 0}
+  notesonj_set: []
   songName: rodeo
   ID: 0
 --- !u!1 &869625635
@@ -501,6 +508,7 @@ MonoBehaviour:
   dataBase: {fileID: 11400000, guid: 248cc9b68fecc8f479cd268ff3202da8, type: 2}
   songNameText: []
   songImage: {fileID: 0}
+  notesonj_set: []
   songName: Cheer up
   ID: 1
 --- !u!1 &1146881579

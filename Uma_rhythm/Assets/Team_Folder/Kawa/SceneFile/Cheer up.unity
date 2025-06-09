@@ -222,6 +222,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 3.44
       objectReference: {fileID: 0}
+    - target: {fileID: 1367734223373975319, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: songID
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1367734223802559299, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: m_Name
       value: StageBox

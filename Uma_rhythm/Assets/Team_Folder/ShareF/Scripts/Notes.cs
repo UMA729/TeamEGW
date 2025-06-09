@@ -16,7 +16,7 @@ public class Notes : MonoBehaviour
     }
     void Update()
     {
-        if (Time.time > Time.time+1.5f)
+        if (Time.timeSinceLevelLoad > 1.5f)
         {
             start = true;
         }

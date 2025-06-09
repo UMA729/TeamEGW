@@ -25,7 +25,7 @@ public class MusicManager : MonoBehaviour
         {
             Debug.Log("1");
         }
-        if (Time.time > 1.5f && !played)
+        if (Time.time > Time.time+ 1.5f && !played)
         {
             GManager.instance.Start = true;
             GManager.instance.StartTime = Time.time;

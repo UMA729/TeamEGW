@@ -104,9 +104,12 @@ public class Judge : MonoBehaviour
                 //ミス
             }
 
-            //Debug.Log("エンドタイム"+end_time);
-            //Debug.Log("現在時間"+Time.deltaTime);
-
+            if (Time.time < end_time + GManager.instance.StartTime)
+            {
+                Debug.Log("エンドタイム" + end_time);
+                Debug.Log("現在時間T" + Time.time);
+                Debug.Log("現在時間S" + GManager.instance.StartTime);
+            }
         }
     }
     void Judgement(float timeLag)

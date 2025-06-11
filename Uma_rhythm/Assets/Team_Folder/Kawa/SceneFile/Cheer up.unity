@@ -474,19 +474,19 @@ PrefabInstance:
     - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: noteObj.Array.data[0]
       value: 
-      objectReference: {fileID: 3620609234353890909, guid: 3ea9b81fc20ff6a46b6b9c53912ed23d, type: 3}
+      objectReference: {fileID: 7134396187461999812, guid: e00d0dae67808a242acc88cd2d9682b7, type: 3}
     - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: noteObj.Array.data[1]
       value: 
-      objectReference: {fileID: 3620609234353890909, guid: 3ea9b81fc20ff6a46b6b9c53912ed23d, type: 3}
+      objectReference: {fileID: 4575508941933012004, guid: 3f2853b5fbb2f364a878161b45f76939, type: 3}
     - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: noteObj.Array.data[2]
       value: 
-      objectReference: {fileID: 3620609234353890909, guid: 3ea9b81fc20ff6a46b6b9c53912ed23d, type: 3}
+      objectReference: {fileID: 2695623160862328280, guid: 39bf5fd24cdb53c45bdc05bceb2f8128, type: 3}
     - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: noteObj.Array.data[3]
       value: 
-      objectReference: {fileID: 3620609234353890909, guid: 3ea9b81fc20ff6a46b6b9c53912ed23d, type: 3}
+      objectReference: {fileID: 7875881353495065293, guid: de9b8cfb08aaf2a4bb62771dbaf90234, type: 3}
     - target: {fileID: 1367734224118632654, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.27

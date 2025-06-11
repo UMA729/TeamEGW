@@ -16,7 +16,7 @@ public class Judge : MonoBehaviour
 
     void Start()
     {
-        end_time = notesManager.NotesTime[notesManager.NotesTime.Count - 1];
+        end_time = notesManager.NotesTime[notesManager.NotesTime.Count-1];
         cnt = 0;
     }
 
@@ -24,9 +24,10 @@ public class Judge : MonoBehaviour
     {
         if (GManager.instance.Start)
         {
-            Debug.Log("残り秒数" + (end_time + GManager.instance.StartTime - Time.time));
+            //if(end_time+GManager.instance.StartTime-Time.time > 0)
+            //Debug.Log("残り秒数" + (end_time + GManager.instance.StartTime - Time.time));
 
-            if (Time.time > end_time + GManager.instance.StartTime)
+            if (Time.time > end_time + GManager.instance.StartTime + 0.3f)
             {
                 Debug.Log("aiueo");
                 Invoke("Result", 2f);//ノーツの終わり2秒後にリザルト関数へ
@@ -96,6 +97,7 @@ public class Judge : MonoBehaviour
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                     }
                 }
+
             }
 
             if (Time.time > notesManager.NotesTime[0] + 0.2f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
@@ -152,9 +154,9 @@ public class Judge : MonoBehaviour
     }
     void deleteData()//すでにたたいたノーツを削除する関数
     {
+        Debug.Log(notesManager.NoteType[0]);
         if (notesManager.NoteType[0] < 5)
         {
-            Debug.Log(notesManager.NoteType[0]);
             Destroy(notesManager.NotesObj[cnt]);
         }
         notesManager.NotesTime.RemoveAt(0);

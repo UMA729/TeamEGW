@@ -133,7 +133,7 @@ public class Judge : MonoBehaviour
             message(1);
             deleteData();
         }
-        else if (timeLag <= 0.3f)//–{—ˆƒm[ƒc‚ð‚½‚½‚­‚×‚«ŽžŠÔ‚ÆŽÀÛ‚Éƒm[ƒc‚ð‚½‚½‚¢‚½ŽžŠÔ‚ÌŒë·‚ª0.5•bˆÈ‰º‚¾‚Á‚½‚ç
+        else if (timeLag <= 0.5f)//–{—ˆƒm[ƒc‚ð‚½‚½‚­‚×‚«ŽžŠÔ‚ÆŽÀÛ‚Éƒm[ƒc‚ð‚½‚½‚¢‚½ŽžŠÔ‚ÌŒë·‚ª0.5•bˆÈ‰º‚¾‚Á‚½‚ç
         {
             //Debug.Log("Bad");
             GManager.instance.bad++;

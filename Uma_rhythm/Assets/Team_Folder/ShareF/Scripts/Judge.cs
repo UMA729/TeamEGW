@@ -102,6 +102,8 @@ public class Judge : MonoBehaviour
 
             if (Time.time > notesManager.NotesTime[0] + 0.2f + GManager.instance.StartTime)//本来ノーツをたたくべき時間から0.2秒たっても入力がなかった場合
             {
+                GManager.instance.combo = 0;
+                GManager.instance.miss++;
                 message(3);
                 deleteData();
                 //Debug.Log("Miss");
@@ -123,7 +125,7 @@ public class Judge : MonoBehaviour
             message(0);
             deleteData();
         }
-        else if (timeLag <= 0.14f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.3秒以下だったら
+        else if (timeLag <= 0.2f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.3秒以下だったら
         {
             //Debug.Log("Good");
             GManager.instance.good++;
@@ -131,11 +133,11 @@ public class Judge : MonoBehaviour
             message(1);
             deleteData();
         }
-        else if (timeLag <= 0.24f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.5秒以下だったら
+        else if (timeLag <= 0.3f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.5秒以下だったら
         {
             //Debug.Log("Bad");
             GManager.instance.bad++;
-            GManager.instance.combo++;
+            GManager.instance.combo = 0;
             message(2);
             deleteData();
         }

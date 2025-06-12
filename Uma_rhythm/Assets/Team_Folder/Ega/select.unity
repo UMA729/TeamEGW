@@ -255,6 +255,7 @@ MonoBehaviour:
   dataBase: {fileID: 11400000, guid: 248cc9b68fecc8f479cd268ff3202da8, type: 2}
   songNameText: []
   songImage: {fileID: 0}
+  notesonj_set: []
   songName: "\u80CC\u5F8C\u970A"
   ID: 3
 --- !u!1 &749686465 stripped
@@ -290,6 +291,11 @@ MonoBehaviour:
   dataBase: {fileID: 11400000, guid: 248cc9b68fecc8f479cd268ff3202da8, type: 2}
   songNameText: []
   songImage: {fileID: 0}
+  notesonj_set:
+  - {fileID: 97148699284654359, guid: 7303ebaa67248c84497c1495ccccb2ce, type: 3}
+  - {fileID: 97148699284654359, guid: f22d6d8c850e34b4fa8749faf1a9d8df, type: 3}
+  - {fileID: 97148699284654359, guid: b1376c57f96b7604e92fe0dd117784c7, type: 3}
+  - {fileID: 97148699284654359, guid: f03f460c85e4d70469ed7a3b523a4bc9, type: 3}
   songName: "\u6F22\u796D\u308A"
   ID: 2
 --- !u!1 &866701200 stripped
@@ -325,92 +331,9 @@ MonoBehaviour:
   dataBase: {fileID: 11400000, guid: 248cc9b68fecc8f479cd268ff3202da8, type: 2}
   songNameText: []
   songImage: {fileID: 0}
+  notesonj_set: []
   songName: rodeo
   ID: 0
---- !u!1 &869625635
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 869625637}
-  - component: {fileID: 869625636}
-  m_Layer: 0
-  m_Name: "\u623B\u308B\u6587\u5B57\u3060\u3051"
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &869625636
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869625635}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: bbd346cbb632ada42a3bd9ebd36c62df, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 19.2, y: 10.8}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &869625637
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 869625635}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.02, y: 6.87, z: 0}
-  m_LocalScale: {x: 0.2409753, y: 0.2409753, z: 0.2409753}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &910168887
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -420,7 +343,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2304583790647463968, guid: 0f5739cf8af0a71459a281c0cf1b473e, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2304583790647463968, guid: 0f5739cf8af0a71459a281c0cf1b473e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -501,6 +424,7 @@ MonoBehaviour:
   dataBase: {fileID: 11400000, guid: 248cc9b68fecc8f479cd268ff3202da8, type: 2}
   songNameText: []
   songImage: {fileID: 0}
+  notesonj_set: []
   songName: Cheer up
   ID: 1
 --- !u!1 &1146881579
@@ -585,7 +509,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1207290154
 GameObject:

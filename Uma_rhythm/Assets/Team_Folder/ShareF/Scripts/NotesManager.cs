@@ -24,6 +24,7 @@ public class Note
 public class NotesManager : MonoBehaviour
 {
     [SerializeField]SongDataBase dataBase;
+    SongSelect songSelect;
 
     public int noteNum;
     private string songName;
@@ -36,7 +37,7 @@ public class NotesManager : MonoBehaviour
     public List<GameObject> NotesObj = new List<GameObject>();
 
     [SerializeField] private float NotesSpeed;
-    [SerializeField] GameObject[] noteObj;
+    public GameObject[] noteObj;
 
     void OnEnable()
     {
@@ -66,7 +67,7 @@ public class NotesManager : MonoBehaviour
 
             float x = NotesTime[i] * NotesSpeed;
 
-            for (int j = 0; j < 12; j++)
+            for (int j = 0; j < noteObj.Length; j++)
             {
                 if (NoteType[i] == j + 1)
                     NotesObj.Add(Instantiate(noteObj[j], new Vector3(x, 0.55f, 1.5f), Quaternion.identity));

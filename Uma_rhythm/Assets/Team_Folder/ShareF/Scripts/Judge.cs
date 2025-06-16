@@ -3,16 +3,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class Judge : MonoBehaviour
 {
     [SerializeField] private GameObject[] MessageObj;
     [SerializeField] NotesManager notesManager;
     public string resultScene;
+    public Text ScoreText;
 
     int cnt = 0;
 
     float end_time = 0.0f;
+
+    public static int GetScore()
+    {
+        return GManager.instance.score;
+    }
+
+    public static int GetPerfect()
+    {
+        return GManager.instance.perfect;
+    }
+    public static int GetGood()
+    {
+        return GManager.instance.good;
+    }
+    public static int GetBad()
+    {
+        return GManager.instance.bad;
+    }
+    public static int GetMiss()
+    {
+        return GManager.instance.miss;
+    }
 
     void Start()
     {
@@ -110,7 +135,9 @@ public class Judge : MonoBehaviour
                 //ƒ~ƒX
             }
 
-          }
+        }
+
+        ScoreText.text = string.Format("{0}", GManager.instance.score);
 
         //Debug.Log("Œ»İŠÔT" + Time.time);
 
@@ -122,6 +149,7 @@ public class Judge : MonoBehaviour
             //Debug.Log("Perfect");
             GManager.instance.perfect++;
             GManager.instance.combo++;
+            GManager.instance.score += 1000;
             message(0);
             deleteData();
         }
@@ -130,6 +158,7 @@ public class Judge : MonoBehaviour
             //Debug.Log("Good");
             GManager.instance.good++;
             GManager.instance.combo++;
+            GManager.instance.score += 500;
             message(1);
             deleteData();
         }
@@ -138,9 +167,11 @@ public class Judge : MonoBehaviour
             //Debug.Log("Bad");
             GManager.instance.bad++;
             GManager.instance.combo = 0;
+            GManager.instance.score += 100;
             message(2);
             deleteData();
         }
+  
     }
     
     float GetABS(float num)//ˆø”‚Ìâ‘Î’l‚ğ•Ô‚·ŠÖ”
@@ -174,6 +205,7 @@ public class Judge : MonoBehaviour
 
         Destroy(Message,0.5f);
     }
+
 
     void Result()
     {

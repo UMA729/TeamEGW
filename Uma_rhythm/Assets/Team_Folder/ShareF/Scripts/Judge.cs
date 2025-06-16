@@ -9,10 +9,38 @@ public class Judge : MonoBehaviour
     [SerializeField] private GameObject[] MessageObj;
     [SerializeField] NotesManager notesManager;
     public string resultScene;
+    public static int Score_time = 0;
+    public static int Perfect_time = 0;
+    public static int Good_time = 0;
+    public static int Bad_time = 0;
+    public static int Miss_time = 0;
+
 
     int cnt = 0;
 
     float end_time = 0.0f;
+
+    public static int GetScore()
+    {
+        return Score_time;
+    }
+
+    public static int GetPerfect()
+    {
+        return Perfect_time;
+    }
+    public static int GetGood()
+    {
+        return Good_time;
+    }
+    public static int GetBad()
+    {
+        return Bad_time;
+    }
+    public static int GetMiss()
+    {
+        return Miss_time;
+    }
 
     void Start()
     {
@@ -104,6 +132,7 @@ public class Judge : MonoBehaviour
             {
                 GManager.instance.combo = 0;
                 GManager.instance.miss++;
+                Miss_time++;
                 message(3);
                 deleteData();
                 //Debug.Log("Miss");
@@ -122,6 +151,7 @@ public class Judge : MonoBehaviour
             //Debug.Log("Perfect");
             GManager.instance.perfect++;
             GManager.instance.combo++;
+            Perfect_time++;
             message(0);
             deleteData();
         }
@@ -130,6 +160,7 @@ public class Judge : MonoBehaviour
             //Debug.Log("Good");
             GManager.instance.good++;
             GManager.instance.combo++;
+            Good_time++;
             message(1);
             deleteData();
         }
@@ -138,6 +169,7 @@ public class Judge : MonoBehaviour
             //Debug.Log("Bad");
             GManager.instance.bad++;
             GManager.instance.combo = 0;
+            Bad_time++;
             message(2);
             deleteData();
         }
@@ -174,6 +206,7 @@ public class Judge : MonoBehaviour
 
         Destroy(Message,0.5f);
     }
+
 
     void Result()
     {

@@ -10,11 +10,13 @@ public class Result : MonoBehaviour
     public Text GoodText;
     public Text BadText;
     public Text MissText;
+    public Text RealScoreText;
     int Score;
     int Perfect;
     int Good;
     int Bad;
     int Miss;
+    int Real;
 
 
     // Start is called before the first frame update
@@ -39,6 +41,7 @@ public class Result : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        Real = Judge.GetScore();
+        RealScoreText.text = string.Format("{0}", Real);
     }
 }

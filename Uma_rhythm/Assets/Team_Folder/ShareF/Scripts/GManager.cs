@@ -20,6 +20,8 @@ public class GManager : MonoBehaviour
     public int good;
     public int bad;
     public int miss;
+
+    public GameObject backImage;
     public void Awake()
     {
         Application.targetFrameRate = 60; // ‰Šúó‘Ô‚Í-1‚É‚È‚Á‚Ä‚¢‚é

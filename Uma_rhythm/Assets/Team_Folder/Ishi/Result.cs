@@ -36,6 +36,12 @@ public class Result : MonoBehaviour
 
         Miss = Judge.GetMiss();
         MissText.text = string.Format("{0}", Miss);
+
+        GManager.instance.score = 0;
+        GManager.instance.perfect = 0;
+        GManager.instance.good = 0;
+        GManager.instance.bad = 0;
+        GManager.instance.miss = 0;
     }
 
     // Update is called once per frame

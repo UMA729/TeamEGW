@@ -2,17 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class ButtonBGM : MonoBehaviour
 {
-    public void OnPointerEnter(PointerEventData eventData)
+    public AudioSource audioSource;
+
+    private void Start()
     {
-        Debug.Log("マウスが" + gameObject.name + "に触れた");
-        // 何かしらの処理
+        GetComponent<Button>().onClick.AddListener(PlaySound);
     }
 
-    public void OnPointerExit(PointerEventData eventData)
+    void PlaySound()
     {
-        Debug.Log("マウスが" + gameObject.name + "から離れた");
+        Debug.Log("ボタンをクリックした");
+
+        audioSource.Play();
     }
+
+
+
 }

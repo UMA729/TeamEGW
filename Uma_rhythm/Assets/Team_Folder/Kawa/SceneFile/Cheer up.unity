@@ -187,6 +187,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: noteObj.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: noteObj.Array.data[0]
       value: 
       objectReference: {fileID: 634955957883558702, guid: 3ca52e5fb1e32e449a622dadf03b8058, type: 3}
@@ -200,6 +204,22 @@ PrefabInstance:
       objectReference: {fileID: 140338871466517277, guid: 2a5a14407c41e6940a2c6ea588f82da3, type: 3}
     - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: noteObj.Array.data[3]
+      value: 
+      objectReference: {fileID: 6451374727843516408, guid: 495b58792c0cded4a8786f7391a4ecc8, type: 3}
+    - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: noteObj.Array.data[4]
+      value: 
+      objectReference: {fileID: 6451374727843516408, guid: 495b58792c0cded4a8786f7391a4ecc8, type: 3}
+    - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: noteObj.Array.data[5]
+      value: 
+      objectReference: {fileID: 6451374727843516408, guid: 495b58792c0cded4a8786f7391a4ecc8, type: 3}
+    - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: noteObj.Array.data[6]
+      value: 
+      objectReference: {fileID: 6451374727843516408, guid: 495b58792c0cded4a8786f7391a4ecc8, type: 3}
+    - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: noteObj.Array.data[7]
       value: 
       objectReference: {fileID: 6451374727843516408, guid: 495b58792c0cded4a8786f7391a4ecc8, type: 3}
     - target: {fileID: 1367734224508062685, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
@@ -516,7 +536,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 113769752}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1849398587
 SpriteRenderer:

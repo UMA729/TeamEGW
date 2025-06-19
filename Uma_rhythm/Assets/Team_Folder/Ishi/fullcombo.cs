@@ -7,18 +7,18 @@ public class fullcombo : MonoBehaviour
 {
     int Bad;
     int Miss;
-    [SerializeField] Text text;
+    public GameObject FullCombo;
     void Start()
     {
         Bad = Judge.GetBad();
         Miss = Judge.GetMiss();
         if (Bad == 0 && Miss == 0)
         {
-            text.enabled = true;
+            FullCombo.SetActive(true);
         }
         else
         {
-            text.enabled = false;
+            FullCombo.SetActive(false);
         }
     }
 

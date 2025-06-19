@@ -1722,7 +1722,7 @@ PrefabInstance:
     - target: {fileID: 1367734223931470519, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: noteObj.Array.data[4]
       value: 
-      objectReference: {fileID: 1269821182}
+      objectReference: {fileID: 1767617784589664841, guid: 143707007469a0b45bd5526505c1dac1, type: 3}
     - target: {fileID: 1367734224508062685, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: resultScene
       value: "\u30EA\u30B6\u30EB\u30C8"

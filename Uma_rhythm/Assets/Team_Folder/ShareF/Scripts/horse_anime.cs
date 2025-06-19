@@ -23,15 +23,9 @@ public class horse_anime : MonoBehaviour
     void Update()
     {
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0); //アニメーションの現状を変数
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (Input.GetKeyDown(KeyCode.UpArrow) ||
-            Input.GetKeyDown(KeyCode.DownArrow) ||
-            Input.GetKeyDown(KeyCode.RightArrow) ||
-            Input.GetKeyDown(KeyCode.LeftArrow))
-            {
-                now_anime = jump;
-            }
+            now_anime = jump;
         }
         // アニメーションが終了しているか確認
         if (stateInfo.IsName("Jump_Animation") && stateInfo.normalizedTime >= 1.0f)

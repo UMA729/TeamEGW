@@ -62,36 +62,36 @@ public class Judge : MonoBehaviour
             {
                 if (notesManager.NoteType[0] == 1)
                 {
-                    if (Input.GetKeyDown("up") || Input.GetKeyDown("W"))
+                    if (Input.GetKeyDown("up"))
                     {
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                     }
                 }
                 if (notesManager.NoteType[0] == 2)
                 {
-                    if (Input.GetKeyDown("left") || Input.GetKeyDown("A"))
+                    if (Input.GetKeyDown("left"))
                     {
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                     }
                 }
                 if (notesManager.NoteType[0] == 3)
                 {
-                    if (Input.GetKeyDown("down") || Input.GetKeyDown("S"))
+                    if (Input.GetKeyDown("down"))
                     {
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                     }
                 }
                 if (notesManager.NoteType[0] == 4)
                 {
-                    if (Input.GetKeyDown("right") || Input.GetKeyDown("D"))
+                    if (Input.GetKeyDown("right"))
                     {
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                     }
                 }
                 if(notesManager.NoteType[0] == 5)
                 {
-                        if(Input.GetKey(KeyCode.Space))
-                        {
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                     }
                 }
@@ -161,10 +161,8 @@ public class Judge : MonoBehaviour
     void deleteData()//Ç∑Ç≈Ç…ÇΩÇΩÇ¢ÇΩÉmÅ[ÉcÇçÌèúÇ∑ÇÈä÷êî
     {
         Debug.Log(notesManager.NoteType[0]);
-        if (notesManager.NoteType[0] < 5)
-        {
-            Destroy(notesManager.NotesObj[cnt]);
-        }
+
+        Destroy(notesManager.NotesObj[cnt]);
         notesManager.NotesTime.RemoveAt(0);
         notesManager.LaneNum.RemoveAt(0);
         notesManager.NoteType.RemoveAt(0);

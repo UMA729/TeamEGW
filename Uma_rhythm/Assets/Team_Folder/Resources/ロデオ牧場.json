@@ -36,7 +36,7 @@
       "LPB": 4,
       "num": 20,
       "block": 1,
-      "type": 1,
+      "type": 5,
       "notes": []
     },
     {
@@ -127,7 +127,7 @@
       "LPB": 4,
       "num": 70,
       "block": 1,
-      "type": 3,
+      "type": 5,
       "notes": []
     },
     {
@@ -162,7 +162,7 @@
       "LPB": 4,
       "num": 92,
       "block": 1,
-      "type": 1,
+      "type": 5,
       "notes": []
     },
     {
@@ -239,7 +239,7 @@
       "LPB": 4,
       "num": 134,
       "block": 1,
-      "type": 1,
+      "type": 5,
       "notes": []
     },
     {
@@ -400,7 +400,7 @@
       "LPB": 4,
       "num": 224,
       "block": 1,
-      "type": 1,
+      "type": 5,
       "notes": []
     },
     {
@@ -498,7 +498,7 @@
       "LPB": 4,
       "num": 288,
       "block": 1,
-      "type": 1,
+      "type": 5,
       "notes": []
     },
     {
@@ -561,7 +561,7 @@
       "LPB": 4,
       "num": 326,
       "block": 1,
-      "type": 1,
+      "type": 5,
       "notes": []
     },
     {
@@ -729,7 +729,7 @@
       "LPB": 4,
       "num": 404,
       "block": 1,
-      "type": 1,
+      "type": 5,
       "notes": []
     },
     {
@@ -743,7 +743,7 @@
       "LPB": 4,
       "num": 412,
       "block": 1,
-      "type": 3,
+      "type": 5,
       "notes": []
     },
     {
@@ -841,7 +841,7 @@
       "LPB": 4,
       "num": 448,
       "block": 1,
-      "type": 1,
+      "type": 5,
       "notes": []
     },
     {

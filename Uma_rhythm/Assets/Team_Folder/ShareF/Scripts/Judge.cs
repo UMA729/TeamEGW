@@ -58,67 +58,40 @@ public class Judge : MonoBehaviour
                 Invoke("Result", 2f);//ノーツの終わり2秒後にリザルト関数へ
                 return;
             }
-            else if (Input.GetKey(KeyCode.Space))
-            {
-               
-                if (notesManager.NoteType[0] == 5)
-                {
-                    {
-                        if (Input.GetKeyDown("up"))
-                            Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
-                    }
-                }
-                if (notesManager.NoteType[0] == 6)
-                {
-                    {
-                        if (Input.GetKeyDown("left"))
-                            Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
-                    }
-                }
-                if (notesManager.NoteType[0] == 7)
-                {
-                    {
-                        if (Input.GetKeyDown("down"))
-                            Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
-
-                    }
-                }
-                if (notesManager.NoteType[0] == 8)
-                {
-                    {
-                        if (Input.GetKeyDown("right"))
-                            Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
-
-                    }
-                }
-            }
             else
             {
                 if (notesManager.NoteType[0] == 1)
                 {
-                    if (Input.GetKeyDown("up"))
+                    if (Input.GetKeyDown("up") || Input.GetKeyDown("W"))
                     {
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                     }
                 }
                 if (notesManager.NoteType[0] == 2)
                 {
-                    if (Input.GetKeyDown("left"))
+                    if (Input.GetKeyDown("left") || Input.GetKeyDown("A"))
                     {
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                     }
                 }
                 if (notesManager.NoteType[0] == 3)
                 {
-                    if (Input.GetKeyDown("down"))
+                    if (Input.GetKeyDown("down") || Input.GetKeyDown("S"))
                     {
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                     }
                 }
                 if (notesManager.NoteType[0] == 4)
                 {
-                    if (Input.GetKeyDown("right"))
+                    if (Input.GetKeyDown("right") || Input.GetKeyDown("D"))
                     {
+                        Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    }
+                }
+                if(notesManager.NoteType[0] == 5)
+                {
+                        if(Input.GetKey(KeyCode.Space))
+                        {
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                     }
                 }

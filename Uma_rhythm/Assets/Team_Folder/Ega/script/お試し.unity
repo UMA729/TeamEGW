@@ -837,13 +837,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 791190912}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -896,10 +896,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 791190909}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8afdd10dcafad9f4f88fb7b1333adc43, type: 3}
+  m_Script: {fileID: 11500000, guid: 480e5d58e0db9e8469b4070d6affbeb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverSound: {fileID: 8300000, guid: d12d64ba42f21e8489e7df9fb8a0b4bc, type: 3}
+  audioSource: {fileID: 0}
 --- !u!1 &956715804
 GameObject:
   m_ObjectHideFlags: 0

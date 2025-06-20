@@ -5,20 +5,22 @@ using UnityEngine.UI;
 
 public class fullcombo : MonoBehaviour
 {
-    [SerializeField] Text text;
-    
-
-    // Update is called once per frame
-    void Update()
+    int Bad;
+    int Miss;
+    public GameObject FullCombo;
+    void Start()
     {
-        if (Input.GetMouseButtonDown(0))
+        Bad = Judge.GetBad();
+        Miss = Judge.GetMiss();
+        if (Bad == 0 && Miss == 0)
         {
-            text.enabled = false;
+            FullCombo.SetActive(true);
         }
-
-        if (Input.GetMouseButtonDown(1))
+        else
         {
-            text.enabled = true;
+            FullCombo.SetActive(false);
         }
     }
+
+
 }

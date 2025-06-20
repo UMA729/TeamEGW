@@ -3,16 +3,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
 
 public class Judge : MonoBehaviour
 {
     [SerializeField] private GameObject[] MessageObj;
     [SerializeField] NotesManager notesManager;
     public string resultScene;
+    public Text ScoreText;
 
     int cnt = 0;
 
     float end_time = 0.0f;
+
+    public static int GetScore()
+    {
+        return GManager.instance.score;
+    }
+
+    public static int GetPerfect()
+    {
+        return GManager.instance.perfect;
+    }
+    public static int GetGood()
+    {
+        return GManager.instance.good;
+    }
+    public static int GetBad()
+    {
+        return GManager.instance.bad;
+    }
+    public static int GetMiss()
+    {
+        return GManager.instance.miss;
+    }
 
     void Start()
     {
@@ -32,40 +57,6 @@ public class Judge : MonoBehaviour
                 Debug.Log("aiueo");
                 Invoke("Result", 2f);//ノーツの終わり2秒後にリザルト関数へ
                 return;
-            }
-            else if (Input.GetKey(KeyCode.Space))
-            {
-               
-                if (notesManager.NoteType[0] == 5)
-                {
-                    {
-                        if (Input.GetKeyDown("up"))
-                            Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
-                    }
-                }
-                if (notesManager.NoteType[0] == 6)
-                {
-                    {
-                        if (Input.GetKeyDown("left"))
-                            Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
-                    }
-                }
-                if (notesManager.NoteType[0] == 7)
-                {
-                    {
-                        if (Input.GetKeyDown("down"))
-                            Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
-
-                    }
-                }
-                if (notesManager.NoteType[0] == 8)
-                {
-                    {
-                        if (Input.GetKeyDown("right"))
-                            Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
-
-                    }
-                }
             }
             else
             {
@@ -97,6 +88,13 @@ public class Judge : MonoBehaviour
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                     }
                 }
+                if(notesManager.NoteType[0] == 5)
+                {
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
+                    }
+                }
 
             }
 
@@ -110,7 +108,9 @@ public class Judge : MonoBehaviour
                 //ミス
             }
 
-          }
+        }
+
+        ScoreText.text = string.Format("{0}", GManager.instance.score);
 
         //Debug.Log("現在時間T" + Time.time);
 
@@ -122,6 +122,7 @@ public class Judge : MonoBehaviour
             //Debug.Log("Perfect");
             GManager.instance.perfect++;
             GManager.instance.combo++;
+            GManager.instance.score += 1000;
             message(0);
             deleteData();
         }
@@ -130,6 +131,7 @@ public class Judge : MonoBehaviour
             //Debug.Log("Good");
             GManager.instance.good++;
             GManager.instance.combo++;
+            GManager.instance.score += 500;
             message(1);
             deleteData();
         }
@@ -138,9 +140,11 @@ public class Judge : MonoBehaviour
             //Debug.Log("Bad");
             GManager.instance.bad++;
             GManager.instance.combo = 0;
+            GManager.instance.score += 100;
             message(2);
             deleteData();
         }
+  
     }
     
     float GetABS(float num)//引数の絶対値を返す関数
@@ -157,10 +161,8 @@ public class Judge : MonoBehaviour
     void deleteData()//すでにたたいたノーツを削除する関数
     {
         Debug.Log(notesManager.NoteType[0]);
-        if (notesManager.NoteType[0] < 5)
-        {
-            Destroy(notesManager.NotesObj[cnt]);
-        }
+
+        Destroy(notesManager.NotesObj[cnt]);
         notesManager.NotesTime.RemoveAt(0);
         notesManager.LaneNum.RemoveAt(0);
         notesManager.NoteType.RemoveAt(0);
@@ -174,6 +176,7 @@ public class Judge : MonoBehaviour
 
         Destroy(Message,0.5f);
     }
+
 
     void Result()
     {

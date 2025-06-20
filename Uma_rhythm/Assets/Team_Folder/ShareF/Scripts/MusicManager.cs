@@ -14,6 +14,7 @@ public class MusicManager : MonoBehaviour
         GManager.instance.Start = false;
         songName = dataBase.SongDatas[GManager.instance.songID].SongName;
         audio = GetComponent<AudioSource>();
+        audio.volume = 50;
         Music = (AudioClip)Resources.Load("Music/" + songName);
         played = false;
     }

@@ -499,6 +499,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1367734223373975319, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: noteSpeed
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 1367734223802559299, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: m_Name
       value: StageBox

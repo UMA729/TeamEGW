@@ -1,25 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ButtonBGM : MonoBehaviour
 {
-    public AudioSource audioSource;
+    public Button myButton;
 
-    private void Start()
+    void Start()
     {
-        GetComponent<Button>().onClick.AddListener(PlaySound);
+        if (myButton != null)
+        {
+            myButton.onClick.AddListener(OnButtonClick);
+        }
+        else
+        {
+            Debug.LogError("Button is not assigned!");
+        }
     }
 
-    void PlaySound()
+    void OnButtonClick()
     {
-        Debug.Log("ボタンをクリックした");
-
-        audioSource.Play();
+        Debug.Log("Button clicked!");
     }
-
-
-
 }

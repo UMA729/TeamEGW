@@ -1,28 +1,50 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement; //シーン切り替えに必要
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class ChangeScene : MonoBehaviour
 {
+    //シーンの行き先
+    public Button myButton;
+    public string sceneName;
+    public AudioClip AudioClip;
+    private AudioSource AudioSource;
+    int s = 0;
 
-    public string sceneName; //読み込むシーン名
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        // AudioSourceを取得またはアタッチ
+        AudioSource = gameObject.AddComponent<AudioSource>();
+        AudioSource.playOnAwake = false;
+        //audioSource.loop = false; // ループ再生を有効化
+        AudioSource.clip = AudioClip;
+
+
+        if (myButton != null)
+        {
+
+            myButton.onClick.AddListener(OnButtonClick);
+        }
+        else
+        {
+
+            Debug.LogError("Button is not assigned!");
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnButtonClick()
     {
-        
+        AudioSource.Play();
+        Invoke("SceneChange", 0.3f);
+        Debug.Log("Button clicked!");
     }
 
-    //シーンを読み込む
-    public void Load()
+    //ボタンから呼び出す関数
+    public void SceneChange()
     {
         SceneManager.LoadScene(sceneName);
     }
+
 }
+

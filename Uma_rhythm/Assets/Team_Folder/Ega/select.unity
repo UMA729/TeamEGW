@@ -527,7 +527,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c965e9dc91d2b8a44bfbf778c1e49367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myButton: {fileID: 0}
   sceneName: ru-ru
+  AudioClip: {fileID: 0}
 --- !u!114 &870021322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1094,7 +1096,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1875994657}
         m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
-        m_MethodName: Load
+        m_MethodName: SceneChange
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1154,7 +1156,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c965e9dc91d2b8a44bfbf778c1e49367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myButton: {fileID: 1875994654}
   sceneName: title
+  AudioClip: {fileID: 8300000, guid: 05bba1c4cbe70154ca507dc249a7c3cb, type: 3}
 --- !u!1 &1927901909 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 162309891501901235, guid: 168a16874e8aeb845a0ec68af742d5d7, type: 3}
@@ -1172,7 +1176,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c965e9dc91d2b8a44bfbf778c1e49367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myButton: {fileID: 0}
   sceneName: 
+  AudioClip: {fileID: 0}
 --- !u!1 &2119729987
 GameObject:
   m_ObjectHideFlags: 0

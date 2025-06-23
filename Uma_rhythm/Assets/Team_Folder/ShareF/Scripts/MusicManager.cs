@@ -22,7 +22,7 @@ public class MusicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.timeSinceLevelLoad > 1.5f && !played)
+        if (Time.timeSinceLevelLoad > 4f && !played)
         {
             GManager.instance.Start = true;
             GManager.instance.StartTime = Time.time;

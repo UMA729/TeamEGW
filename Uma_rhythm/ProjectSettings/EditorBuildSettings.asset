@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Team_Folder/Ega/script/stu.unity
     guid: 464802797fb647349a56b2479b53d0ae
   - enabled: 1
@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Team_Folder/Ega/select.unity
     guid: 2f64e998f61ec7d47a42fb4e68985f91
-  - enabled: 1
+  - enabled: 0
     path: "Assets/Team_Folder/Ega/script/\u304A\u8A66\u3057.unity"
     guid: 709330905c1916946b2b6a183a718f52
   - enabled: 1
@@ -35,4 +35,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Team_Folder/Ishi/ru-ru.unity
     guid: 19a05b3abc0e6044bae64a76669e07f3
+  - enabled: 1
+    path: Assets/Team_Folder/Kawa/SceneFile/Credit.unity
+    guid: 37cfed23dacabe4489aa4a5432fa7f8c
   m_configObjects: {}

@@ -1096,7 +1096,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c965e9dc91d2b8a44bfbf778c1e49367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myButton: {fileID: 1188775712}
   sceneName: select
+  AudioClip: {fileID: 0}
 --- !u!114 &1188775712
 MonoBehaviour:
   m_ObjectHideFlags: 0

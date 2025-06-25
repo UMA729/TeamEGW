@@ -420,7 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  resetPosX: -17.8
+  resetPosX: -53.4
 --- !u!212 &778547867
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -481,7 +481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778547865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 35.86, y: 2.6, z: 0}
+  m_LocalPosition: {x: 35.6, y: 2.6, z: 0}
   m_LocalScale: {x: 2.796576, y: 3.141095, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -620,7 +620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  resetPosX: -45.6
+  resetPosX: -53.4
 --- !u!212 &901254137
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -681,7 +681,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 901254135}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.76, y: 2.6, z: 0}
+  m_LocalPosition: {x: 53.4, y: 2.6, z: 0}
   m_LocalScale: {x: 2.796576, y: 3.141095, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1145,7 +1145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431579678}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0999, y: 2.6, z: 0}
+  m_LocalPosition: {x: 0, y: 2.6, z: 0}
   m_LocalScale: {x: 2.796576, y: 3.141095, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1165,7 +1165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  resetPosX: -17.8
+  resetPosX: -53.4
 --- !u!1 &1663645572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1654,7 +1654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  resetPosX: -17.8
+  resetPosX: -53.4
 --- !u!212 &1926512412
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1715,7 +1715,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1926512410}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.96, y: 2.6, z: 0}
+  m_LocalPosition: {x: 17.8, y: 2.6, z: 0}
   m_LocalScale: {x: 2.796576, y: 3.141095, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

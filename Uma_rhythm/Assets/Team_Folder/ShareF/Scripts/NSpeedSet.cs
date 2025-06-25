@@ -5,7 +5,7 @@ using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class horse_speed : MonoBehaviour
+public class NSpeedSet : MonoBehaviour
 {
     public InputField NSP_ChangeT;
     double NoteSet = 0.0f;

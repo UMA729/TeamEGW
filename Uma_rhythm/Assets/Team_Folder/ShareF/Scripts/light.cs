@@ -18,7 +18,7 @@ public class light : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
         audioSource.clip = TapSound;
-        audioSource.volume = 100;
+        audioSource.volume = 0.7f;
     }
 
     // Update is called once per frame
@@ -33,6 +33,10 @@ public class light : MonoBehaviour
             Input.GetKeyDown("down") ||
             Input.GetKeyDown("left") ||
             Input.GetKeyDown("right")||
+            Input.GetKeyDown(KeyCode.W)||
+            Input.GetKeyDown(KeyCode.A)||
+            Input.GetKeyDown(KeyCode.S)||
+            Input.GetKeyDown(KeyCode.D)||
             Input.GetKeyDown(KeyCode.Space))
         {
             color_change();

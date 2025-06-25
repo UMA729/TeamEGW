@@ -1074,9 +1074,13 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1367734223158429644, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: TapSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 250ee46bd64d6464c95c80f91c96493e, type: 3}
     - target: {fileID: 1367734223373975319, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: noteSpeed
-      value: 0.01
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1367734223802559299, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: m_Name

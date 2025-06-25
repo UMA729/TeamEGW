@@ -5,7 +5,7 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     [SerializeField]SongDataBase dataBase;
-    AudioSource audio;
+    AudioSource audioSorce;
     AudioClip Music;
     string songName;
     bool played;
@@ -13,8 +13,8 @@ public class MusicManager : MonoBehaviour
     {
         GManager.instance.Start = false;
         songName = dataBase.SongDatas[GManager.instance.songID].SongName;
-        audio = GetComponent<AudioSource>();
-        audio.volume = 0.8f;
+        audioSorce = GetComponent<AudioSource>();
+        audioSorce.volume = 0.8f;
         Music = (AudioClip)Resources.Load("Music/" + songName);
         played = false;
     }
@@ -27,7 +27,15 @@ public class MusicManager : MonoBehaviour
             GManager.instance.Start = true;
             GManager.instance.StartTime = Time.time;
             played = true;
-            audio.PlayOneShot(Music);
+            audioSorce.PlayOneShot(Music);
+        }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (audioSorce.isPlaying)
+            {
+                audioSorce.Stop();
+                Debug.Log("âπäyÇí‚é~ÇµÇ‹ÇµÇΩÅB");
+            }
         }
     }
 }

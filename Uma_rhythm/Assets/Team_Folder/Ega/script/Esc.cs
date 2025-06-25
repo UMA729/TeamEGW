@@ -7,10 +7,15 @@ using UnityEngine.UI;
 public class Esc : MonoBehaviour
 {
     public GameObject Panel;
+    public AudioClip audioClip;
+
+    public AudioSource audioSource;  //çƒê∂íÜAudioSource
+    int num = 0;
+    //public KeyCode stopKey = KeyCode.Escape;
     // Start is called before the first frame update
     void Start()
     {
-        
+        num = 0;
     }
 
     // Update is called once per frame
@@ -22,5 +27,7 @@ public class Esc : MonoBehaviour
             Debug.Log("Button clicked!");
 
         }
+     
+   
     }
 }

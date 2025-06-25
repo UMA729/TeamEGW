@@ -16,7 +16,7 @@ public class SongSelect : MonoBehaviour
     public string songName;
     public int ID;
 
-    AudioSource audio;
+    AudioSource audioSorce;
     string songname;
 
     // Start is called before the first frame update

@@ -22,7 +22,11 @@ public class horse_speed : MonoBehaviour
     void Update()
     {
         //EnterƒL[‚ğ‰Ÿ‚·
-        if(Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            NotesSpeedEnter();
+        }
+        else if (Input.GetMouseButtonDown(0))
         {
             NotesSpeedEnter();
         }

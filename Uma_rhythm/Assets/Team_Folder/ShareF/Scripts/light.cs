@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class light : MonoBehaviour
 {
-    [SerializeField] int speed = 6;
-    [SerializeField] int num = 0;
+    [SerializeField] int Speed = 6;
+    [SerializeField] int Num = 0;
+    [SerializeField] AudioClip TapSound;
+    AudioSource audioSource;
     Renderer rend;
-    private float alfa = 0;
+    private float Alfa = 0;
     // Start is called before the first frame update
     void Start()
     {
         rend = GetComponent<Renderer>();
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
+        audioSource.clip = TapSound;
     }
 
     // Update is called once per frame
@@ -19,7 +25,7 @@ public class light : MonoBehaviour
     {
         if (!(rend.material.color.a <= 0))
         {
-            rend.material.color = new Color(rend.material.color.r, rend.material.color.r, rend.material.color.r, alfa);
+            rend.material.color = new Color(rend.material.color.r, rend.material.color.r, rend.material.color.r, Alfa);
         }
 
         if (Input.GetKeyDown("up") ||
@@ -29,14 +35,19 @@ public class light : MonoBehaviour
             Input.GetKeyDown(KeyCode.Space))
         {
             color_change();
+            if (audioSource.clip != null)
+            {
+                Debug.Log("a");
+                audioSource.Play();
+            }
         }
 
-        alfa -= speed * Time.deltaTime;
+        Alfa -= Speed * Time.deltaTime;
     }
 
     private void color_change()
     {
-        alfa = 1.0f;
-        rend.material.color = new Color(rend.material.color.r, rend.material.color.g, rend.material.color.b, alfa);
+        Alfa = 1.0f;
+        rend.material.color = new Color(rend.material.color.r, rend.material.color.g, rend.material.color.b, Alfa);
     }
 }

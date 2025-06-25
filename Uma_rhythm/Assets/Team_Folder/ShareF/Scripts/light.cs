@@ -14,6 +14,9 @@ public class light : MonoBehaviour
     void Start()
     {
         rend = GetComponent<Renderer>();
+
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.playOnAwake = false;
         audioSource.clip = TapSound;
     }
 
@@ -32,8 +35,9 @@ public class light : MonoBehaviour
             Input.GetKeyDown(KeyCode.Space))
         {
             color_change();
-            if (audioSource != null)
+            if (audioSource.clip != null)
             {
+                Debug.Log("a");
                 audioSource.Play();
             }
         }

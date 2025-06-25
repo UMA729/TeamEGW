@@ -62,28 +62,28 @@ public class Judge : MonoBehaviour
             {
                 if (notesManager.NoteType[0] == 1)
                 {
-                    if (Input.GetKeyDown("up"))
+                    if (Input.GetKeyDown("up") || Input.GetKeyDown(KeyCode.W))
                     {
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                     }
                 }
                 if (notesManager.NoteType[0] == 2)
                 {
-                    if (Input.GetKeyDown("left"))
+                    if (Input.GetKeyDown("left") || Input.GetKeyDown(KeyCode.A))
                     {
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                     }
                 }
                 if (notesManager.NoteType[0] == 3)
                 {
-                    if (Input.GetKeyDown("down"))
+                    if (Input.GetKeyDown("down") || Input.GetKeyDown(KeyCode.S))
                     {
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                     }
                 }
                 if (notesManager.NoteType[0] == 4)
                 {
-                    if (Input.GetKeyDown("right"))
+                    if (Input.GetKeyDown("right") || Input.GetKeyDown(KeyCode.D))
                     {
                         Judgement(GetABS(Time.time - (notesManager.NotesTime[0] + GManager.instance.StartTime)));
                     }

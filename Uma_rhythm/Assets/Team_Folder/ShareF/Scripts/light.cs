@@ -18,7 +18,7 @@ public class light : MonoBehaviour
         audioSource = gameObject.AddComponent<AudioSource>();
         audioSource.playOnAwake = false;
         audioSource.clip = TapSound;
-        audioSource.volume = 0.7f;
+        audioSource.volume = 0.8f;
     }
 
     // Update is called once per frame

@@ -27,6 +27,10 @@ public class NinjinRun : MonoBehaviour
             Input.GetKeyDown("down") ||
             Input.GetKeyDown("left") ||
             Input.GetKeyDown("right") ||
+            Input.GetKeyDown(KeyCode.W) ||
+            Input.GetKeyDown(KeyCode.A) ||
+            Input.GetKeyDown(KeyCode.S) ||
+            Input.GetKeyDown(KeyCode.D) ||
             Input.GetKeyDown(KeyCode.Space))
         {
             GameObject cloneman;

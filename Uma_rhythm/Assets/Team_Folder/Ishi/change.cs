@@ -1,8 +1,9 @@
-using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class ChangeScene : MonoBehaviour
+using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class change : MonoBehaviour
 {
     //ƒV[ƒ“‚Ìs‚«æ
     public Button myButton;
@@ -32,6 +33,12 @@ public class ChangeScene : MonoBehaviour
             Debug.LogError("Button is not assigned!");
         }
 
+
+        GManager.instance.score = 0;
+        GManager.instance.perfect = 0;
+        GManager.instance.good = 0;
+        GManager.instance.bad = 0;
+        GManager.instance.miss = 0;
     }
 
     public void OnButtonClick()
@@ -46,6 +53,4 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene(sceneName);
     }
-
 }
-

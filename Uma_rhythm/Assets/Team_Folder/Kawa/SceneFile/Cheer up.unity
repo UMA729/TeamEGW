@@ -1486,7 +1486,7 @@ GameObject:
   - component: {fileID: 2110411174}
   - component: {fileID: 2110411173}
   - component: {fileID: 2110411172}
-  - component: {fileID: 2110411171}
+  - component: {fileID: 2110411175}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -1514,21 +1514,6 @@ RectTransform:
   m_AnchoredPosition: {x: 372.5, y: 201.15999}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2110411171
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2110411169}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c965e9dc91d2b8a44bfbf778c1e49367, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myButton: {fileID: 2110411172}
-  sceneName: select
-  AudioClip: {fileID: 8300000, guid: 05bba1c4cbe70154ca507dc249a7c3cb, type: 3}
 --- !u!114 &2110411172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1573,8 +1558,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2110411171}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+      - m_Target: {fileID: 2110411175}
+        m_TargetAssemblyTypeName: change, Assembly-CSharp
         m_MethodName: SceneChange
         m_Mode: 1
         m_Arguments:
@@ -1623,3 +1608,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110411169}
   m_CullTransparentMesh: 1
+--- !u!114 &2110411175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110411169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4745855813e1a443a89837b50e8d9d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myButton: {fileID: 0}
+  sceneName: select
+  AudioClip: {fileID: 8300000, guid: 05bba1c4cbe70154ca507dc249a7c3cb, type: 3}

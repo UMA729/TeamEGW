@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,13 +12,15 @@ public class Result : MonoBehaviour
     public Text BadText;
     public Text MissText;
     public Text RealScoreText;
+    public Text ComboText;
+
     int Score;
     int Perfect;
     int Good;
     int Bad;
     int Miss;
     int Real;
-
+    int Combo;
 
     // Start is called before the first frame update
     void Start()
@@ -42,6 +45,7 @@ public class Result : MonoBehaviour
         GManager.instance.good = 0;
         GManager.instance.bad = 0;
         GManager.instance.miss = 0;
+        GManager.instance.combo = 0;
     }
 
     // Update is called once per frame
@@ -49,5 +53,8 @@ public class Result : MonoBehaviour
     {
         Real = Judge.GetScore();
         RealScoreText.text = string.Format("{0}", Real);
+
+        Combo = Judge.GetCombo();
+        ComboText.text = string.Format("{0}", Combo);
     }
 }

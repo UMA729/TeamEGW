@@ -39,6 +39,7 @@ public class change : MonoBehaviour
         GManager.instance.good = 0;
         GManager.instance.bad = 0;
         GManager.instance.miss = 0;
+        GManager.instance.combo = 0;
     }
 
     public void OnButtonClick()

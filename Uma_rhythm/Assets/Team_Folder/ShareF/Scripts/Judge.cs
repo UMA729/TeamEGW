@@ -38,6 +38,10 @@ public class Judge : MonoBehaviour
     {
         return GManager.instance.miss;
     }
+    public static int GetCombo()
+    {
+        return GManager.instance.combo;
+    }
 
     void Start()
     {

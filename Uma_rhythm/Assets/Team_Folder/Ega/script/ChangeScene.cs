@@ -31,6 +31,12 @@ public class ChangeScene : MonoBehaviour
 
             Debug.LogError("Button is not assigned!");
         }
+
+        GManager.instance.score = 0;
+        GManager.instance.perfect = 0;
+        GManager.instance.good = 0;
+        GManager.instance.bad = 0;
+        GManager.instance.miss = 0;
     }
 
     public void OnButtonClick()

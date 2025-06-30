@@ -29,13 +29,5 @@ public class MusicManager : MonoBehaviour
             played = true;
             audioSorce.PlayOneShot(Music);
         }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (audioSorce.isPlaying)
-            {
-                audioSorce.Stop();
-                Debug.Log("âπäyÇí‚é~ÇµÇ‹ÇµÇΩÅB");
-            }
-        }
     }
 }

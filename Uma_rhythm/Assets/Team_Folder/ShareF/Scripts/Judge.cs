@@ -42,7 +42,10 @@ public class Judge : MonoBehaviour
     {
         return GManager.instance.combo;
     }
-
+    public static int GetMaxCombo()
+    {
+        return GManager.instance.maxcombo;
+    }
     void Start()
     {
         end_time = notesManager.NotesTime[notesManager.NotesTime.Count-1];
@@ -114,7 +117,7 @@ public class Judge : MonoBehaviour
 
         }
 
-        ScoreText.text = string.Format("{0}", GManager.instance.score);
+        //ScoreText.text = string.Format("{0}", GManager.instance.score);
 
         //Debug.Log("Œ»ÝŽžŠÔT" + Time.time);
 
@@ -126,6 +129,10 @@ public class Judge : MonoBehaviour
             //Debug.Log("Perfect");
             GManager.instance.perfect++;
             GManager.instance.combo++;
+            if (GManager.instance.combo >= GManager.instance.maxcombo)
+            {
+                GManager.instance.maxcombo = GManager.instance.combo;
+            }
             GManager.instance.score += 1000;
             message(0);
             deleteData();
@@ -135,6 +142,10 @@ public class Judge : MonoBehaviour
             //Debug.Log("Good");
             GManager.instance.good++;
             GManager.instance.combo++;
+            if (GManager.instance.combo >= GManager.instance.maxcombo)
+            {
+                GManager.instance.maxcombo = GManager.instance.combo;
+            }
             GManager.instance.score += 500;
             message(1);
             deleteData();

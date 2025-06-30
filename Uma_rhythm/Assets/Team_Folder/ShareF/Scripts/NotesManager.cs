@@ -72,6 +72,9 @@ public class NotesManager : MonoBehaviour
                 if (NoteType[i] == j + 1)
                     NotesObj.Add(Instantiate(noteObj[j], new Vector3(x, 0.55f, 1.5f), Quaternion.identity));
             }
+            if(i==inputJson.notes.Length-1)
+            NotesObj.Add(Instantiate(noteObj[5], new Vector3(x+5, 0.55f, 1.5f), Quaternion.identity));
+
         }
     }
 }

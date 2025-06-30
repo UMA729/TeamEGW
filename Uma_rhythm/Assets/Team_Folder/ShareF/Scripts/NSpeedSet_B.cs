@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class NSpeedSet_B : MonoBehaviour
@@ -18,6 +19,7 @@ public class NSpeedSet_B : MonoBehaviour
         MinusOneB = GetComponent<Button>();
         MinusTenB = GetComponent<Button>();
 
+
         NotesText = GameObject.FindAnyObjectByType<Text>();
 
         NotesText.text = GManager.instance.noteSpeed.ToString();
@@ -30,7 +32,6 @@ public class NSpeedSet_B : MonoBehaviour
 
     public void SpeedPlusOne()
     {
-        Debug.Log("a");
         GManager.instance.noteSpeed++;
         SetNotesSpeed();
     }
@@ -52,6 +53,7 @@ public class NSpeedSet_B : MonoBehaviour
 
     void SetNotesSpeed()
     {
+        EventSystem.current.SetSelectedGameObject(null);
 
         NotesText.text = GManager.instance.noteSpeed.ToString();
 

@@ -13,6 +13,7 @@ public class Result : MonoBehaviour
     public Text MissText;
     public Text RealScoreText;
     public Text ComboText;
+    public Text MaxComboText;
 
     int Score;
     int Perfect;
@@ -21,6 +22,7 @@ public class Result : MonoBehaviour
     int Miss;
     int Real;
     int Combo;
+    int MaxCombo;
 
     // Start is called before the first frame update
     void Start()
@@ -40,12 +42,16 @@ public class Result : MonoBehaviour
         Miss = Judge.GetMiss();
         MissText.text = string.Format("{0}", Miss);
 
+        MaxCombo = Judge.GetMaxCombo();
+        MaxComboText.text = string.Format("{0}",MaxCombo);
+
         GManager.instance.score = 0;
         GManager.instance.perfect = 0;
         GManager.instance.good = 0;
         GManager.instance.bad = 0;
         GManager.instance.miss = 0;
         GManager.instance.combo = 0;
+        GManager.instance.maxcombo = 0;
     }
 
     // Update is called once per frame

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class Result : MonoBehaviour
 {
     public Text ScoreText;
@@ -11,21 +10,15 @@ public class Result : MonoBehaviour
     public Text GoodText;
     public Text BadText;
     public Text MissText;
-    public Text RealScoreText;
-    public Text ComboText;
     public Text MaxComboText;
-    public GameObject TextCombo;
-    public GameObject TextCombo2;
+
 
     int Score;
     int Perfect;
     int Good;
     int Bad;
     int Miss;
-    int Real;
-    int Combo;
     int MaxCombo;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -45,7 +38,7 @@ public class Result : MonoBehaviour
         MissText.text = string.Format("{0}", Miss);
 
         MaxCombo = Judge.GetMaxCombo();
-        MaxComboText.text = string.Format("{0}",MaxCombo);
+        MaxComboText.text = string.Format("{0}", MaxCombo);
 
         GManager.instance.score = 0;
         GManager.instance.perfect = 0;
@@ -54,27 +47,5 @@ public class Result : MonoBehaviour
         GManager.instance.miss = 0;
         GManager.instance.combo = 0;
         GManager.instance.maxcombo = 0;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Real = Judge.GetScore();
-        RealScoreText.text = string.Format("{0}", Real);
-
-        Combo = Judge.GetCombo();
-        ComboText.text = string.Format("{0}", Combo);
-        if (Combo != 0)
-        {
-            TextCombo.SetActive(true);
-            TextCombo2.SetActive(true);
-
-        }
-        else
-        {
-            TextCombo.SetActive(false);
-            TextCombo2.SetActive(false);
-        }
-  
     }
 }

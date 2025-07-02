@@ -1,41 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class return_button : MonoBehaviour
 {
-    [SerializeField] SongDataBase dataBase;
+    [SerializeField] Esc Esc;
     public GameObject Panel;
     public AudioSource audioSource;
     public UnityEngine.UI.Button button;
-    AudioClip Music;
-    string songName;
 
-
-
-    // Start is called before the first frame update
+    int count = 3;
     void Start()
     {
-        //songName = dataBase.SongDatas[GManager.instance.songID].SongName;
-        //audioSource = GetComponent<AudioSource>();
-        //Music = (AudioClip)Resources.Load("Music/" + songName);
-        audioSource = GetComponent<AudioSource>();
 
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        // audioSource.Play();
         button.onClick.AddListener(() =>
         {
-
-
-            //isActive = !isActive;
             Panel.SetActive(false);
-            audioSource.Play();
+            StartCoroutine(num());
         });
+  
+       
+    }
+
+    IEnumerator num()
+    {
+        while (count >= 0)
+        {
+            Debug.Log(count);
+            yield return new WaitForSeconds(1f);
+            count--;
+        }
+        if (count == 0)
+        {
+            audioSource.UnPause();
+            Esc.time = true;
+        }
     }
 }

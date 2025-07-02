@@ -219,7 +219,6 @@ GameObject:
   - component: {fileID: 85146590}
   - component: {fileID: 85146589}
   - component: {fileID: 85146588}
-  - component: {fileID: 85146587}
   m_Layer: 5
   m_Name: Button (Legacy)
   m_TagString: Untagged
@@ -247,22 +246,6 @@ RectTransform:
   m_AnchoredPosition: {x: -206, y: 0}
   m_SizeDelta: {x: 221.93, y: 109.62}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &85146587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 85146585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4feb599ae11065419dc6d174eae99b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dataBase: {fileID: 11400000, guid: 248cc9b68fecc8f479cd268ff3202da8, type: 2}
-  Panel: {fileID: 2040698702}
-  audioSource: {fileID: 1702078034}
-  button: {fileID: 85146588}
 --- !u!114 &85146588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,6 +338,7 @@ GameObject:
   m_Component:
   - component: {fileID: 87949385}
   - component: {fileID: 87949384}
+  - component: {fileID: 87949386}
   m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
@@ -429,6 +413,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &87949386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87949383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4feb599ae11065419dc6d174eae99b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Esc: {fileID: 0}
+  Panel: {fileID: 2040698702}
+  audioSource: {fileID: 1702078034}
+  button: {fileID: 85146588}
 --- !u!1 &93813273
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,6 +701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad2532cefc1a242449a4ec95722c4e19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Esc: {fileID: 0}
 --- !u!95 &314499303
 Animator:
   serializedVersion: 5
@@ -2319,14 +2320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0b699a872299c499996e3cba874000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreText: {fileID: 0}
-  PerfectText: {fileID: 0}
-  GoodText: {fileID: 0}
-  BadText: {fileID: 0}
-  MissText: {fileID: 0}
   RealScoreText: {fileID: 2083658639}
   ComboText: {fileID: 618172076}
-  MaxComboText: {fileID: 0}
   TextCombo: {fileID: 1133567342}
   TextCombo2: {fileID: 618172075}
 --- !u!212 &1414444235
@@ -2918,6 +2913,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel: {fileID: 2040698702}
   audioSource: {fileID: 1702078034}
+  time: 1
 --- !u!1 &1835307922
 GameObject:
   m_ObjectHideFlags: 0

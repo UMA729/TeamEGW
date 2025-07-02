@@ -5,6 +5,7 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     [SerializeField]SongDataBase dataBase;
+    [SerializeField] Esc Esc;
     AudioSource audioSorce;
     AudioClip Music;
     string songName;
@@ -22,6 +23,10 @@ public class MusicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Esc.time == false)
+        {
+            return;
+        }
         if (Time.timeSinceLevelLoad > 4f && !played)
         {
             GManager.instance.Start = true;

@@ -8,7 +8,7 @@ public class Esc : MonoBehaviour
 {
     public GameObject Panel;
     public AudioSource audioSource;  //çƒê∂íÜAudioSource
-
+    public bool time = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class Esc : MonoBehaviour
         {
             Panel.SetActive(true);
             Debug.Log("Button clicked!");
-
+            time = false;
             audioSource.Pause();
         }
      

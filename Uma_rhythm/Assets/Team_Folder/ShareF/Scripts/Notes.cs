@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class Notes : MonoBehaviour
 {
-    
+    [SerializeField] Esc Esc;
     //ノーツのスピードを設定
     float NoteSpeed = 8;
     bool start;
@@ -16,6 +16,10 @@ public class Notes : MonoBehaviour
     }
     void Update()
     {
+        if (Esc.time == false)
+        {
+            return;
+        }
         if (Time.timeSinceLevelLoad > 4f)
         {
             start = true;

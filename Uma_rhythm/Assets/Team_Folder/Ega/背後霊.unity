@@ -259,7 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4feb599ae11065419dc6d174eae99b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dataBase: {fileID: 0}
+  dataBase: {fileID: 11400000, guid: 248cc9b68fecc8f479cd268ff3202da8, type: 2}
   Panel: {fileID: 2040698702}
   audioSource: {fileID: 1702078034}
   button: {fileID: 85146588}
@@ -2327,6 +2327,8 @@ MonoBehaviour:
   RealScoreText: {fileID: 2083658639}
   ComboText: {fileID: 618172076}
   MaxComboText: {fileID: 0}
+  TextCombo: {fileID: 1133567342}
+  TextCombo2: {fileID: 618172075}
 --- !u!212 &1414444235
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2403,7 +2405,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1367734223158429632, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.16156796
       objectReference: {fileID: 0}
     - target: {fileID: 1367734223158429632, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: m_LocalScale.y

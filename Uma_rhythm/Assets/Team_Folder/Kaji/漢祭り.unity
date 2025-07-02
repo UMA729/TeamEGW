@@ -568,6 +568,8 @@ MonoBehaviour:
   RealScoreText: {fileID: 2095317743}
   ComboText: {fileID: 865731915}
   MaxComboText: {fileID: 0}
+  TextCombo: {fileID: 1546307042}
+  TextCombo2: {fileID: 865731913}
 --- !u!212 &395164932
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1608,11 +1610,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1367734223158429632, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.14862669
       objectReference: {fileID: 0}
     - target: {fileID: 1367734223158429632, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: m_LocalScale.y
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1367734223158429632, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.8003
       objectReference: {fileID: 0}
     - target: {fileID: 1367734223158429644, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: TapSound

@@ -132,7 +132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1367734223158429632, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.14862669
       objectReference: {fileID: 0}
     - target: {fileID: 1367734223158429632, guid: ee1c6b88ddcb83143808074111c29616, type: 3}
       propertyPath: m_LocalScale.y
@@ -1390,6 +1390,8 @@ MonoBehaviour:
   RealScoreText: {fileID: 694924126}
   ComboText: {fileID: 1502964228}
   MaxComboText: {fileID: 0}
+  TextCombo: {fileID: 1129687751}
+  TextCombo2: {fileID: 1502964226}
 --- !u!212 &1817177182
 SpriteRenderer:
   m_ObjectHideFlags: 0

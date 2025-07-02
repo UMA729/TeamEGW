@@ -21,7 +21,14 @@ public class return_button : MonoBehaviour
         //songName = dataBase.SongDatas[GManager.instance.songID].SongName;
         //audioSource = GetComponent<AudioSource>();
         //Music = (AudioClip)Resources.Load("Music/" + songName);
+        audioSource = GetComponent<AudioSource>();
 
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // audioSource.Play();
         button.onClick.AddListener(() =>
         {
 
@@ -30,12 +37,5 @@ public class return_button : MonoBehaviour
             Panel.SetActive(false);
             audioSource.Play();
         });
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-       //Panel.SetActive(false);
-       // audioSource.Play();
     }
 }

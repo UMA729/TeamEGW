@@ -14,6 +14,8 @@ public class Result : MonoBehaviour
     public Text RealScoreText;
     public Text ComboText;
     public Text MaxComboText;
+    public GameObject TextCombo;
+    public GameObject TextCombo2;
 
     int Score;
     int Perfect;
@@ -62,5 +64,17 @@ public class Result : MonoBehaviour
 
         Combo = Judge.GetCombo();
         ComboText.text = string.Format("{0}", Combo);
+        if (Combo != 0)
+        {
+            TextCombo.SetActive(true);
+            TextCombo2.SetActive(true);
+
+        }
+        else
+        {
+            TextCombo.SetActive(false);
+            TextCombo2.SetActive(false);
+        }
+  
     }
 }

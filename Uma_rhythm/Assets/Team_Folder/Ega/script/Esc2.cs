@@ -7,7 +7,7 @@ public class Esc2 : MonoBehaviour
 {
     [SerializeField]
     //　ポーズした時に表示するUIのプレハブ
-    private GameObject pauseUIPrefab;
+    private GameObject Panel;
     //　ポーズUIのインスタンス
     private GameObject pauseUIInstance;
     public AudioSource audioSource; // 再生中のAudioSource
@@ -22,8 +22,10 @@ public class Esc2 : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-  
+            Panel.SetActive(true);
+            Debug.Log("Button clicked!");
 
+            audioSource.Pause();
         }
     }
 }

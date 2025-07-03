@@ -1382,14 +1382,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0b699a872299c499996e3cba874000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreText: {fileID: 0}
-  PerfectText: {fileID: 0}
-  GoodText: {fileID: 0}
-  BadText: {fileID: 0}
-  MissText: {fileID: 0}
   RealScoreText: {fileID: 694924126}
   ComboText: {fileID: 1502964228}
-  MaxComboText: {fileID: 0}
   TextCombo: {fileID: 1129687751}
   TextCombo2: {fileID: 1502964226}
 --- !u!212 &1817177182

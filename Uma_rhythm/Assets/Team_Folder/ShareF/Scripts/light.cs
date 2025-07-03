@@ -7,7 +7,6 @@ public class light : MonoBehaviour
     [SerializeField] int Speed = 6;
     [SerializeField] int Num = 0;
     [SerializeField] AudioClip TapSound;
-    [SerializeField] Esc Esc;
     AudioSource audioSource;
     Renderer rend;
     private float Alfa = 0;
@@ -25,10 +24,6 @@ public class light : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Esc.time == false)
-        {
-            return;
-        }
         if (!(rend.material.color.a <= 0))
         {
             rend.material.color = new Color(rend.material.color.r, rend.material.color.r, rend.material.color.r, Alfa);

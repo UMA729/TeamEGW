@@ -10,7 +10,6 @@ public class Judge : MonoBehaviour
 {
     [SerializeField] private GameObject[] MessageObj;
     [SerializeField] NotesManager notesManager;
-    [SerializeField] Esc Esc;
     public string resultScene;
     public Text ScoreText;
 
@@ -56,11 +55,6 @@ public class Judge : MonoBehaviour
 
     void Update()
     {
-        if(Esc.time == false)
-        {
-            return;
-        }
-
         if (GManager.instance.Start)
         {
             //if(end_time+GManager.instance.StartTime-Time.time > 0)

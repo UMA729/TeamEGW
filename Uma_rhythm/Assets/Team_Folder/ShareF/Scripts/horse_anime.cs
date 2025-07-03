@@ -6,7 +6,6 @@ public class horse_anime : MonoBehaviour
 {
     Animator animator;
 
-    [SerializeField] Esc Esc;
     string normal = "真打ウマバシリ改";
     string jump = "Jump_Animation";
     string now_anime = "";
@@ -20,12 +19,8 @@ public class horse_anime : MonoBehaviour
         old_anime = normal;
     }
 
-    private void FixedUpdate()
+    void Update()
     {
-        if (Esc.time == false)
-        {
-            return;
-        }
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0); //アニメーションの現状を変数
         if (Input.GetKeyDown(KeyCode.Space))
         {

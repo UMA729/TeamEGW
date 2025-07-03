@@ -13,6 +13,7 @@ public class light : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         rend = GetComponent<Renderer>();
 
         audioSource = gameObject.AddComponent<AudioSource>();
@@ -24,6 +25,8 @@ public class light : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Esc.pause) return;
+
         if (!(rend.material.color.a <= 0))
         {
             rend.material.color = new Color(rend.material.color.r, rend.material.color.r, rend.material.color.r, Alfa);

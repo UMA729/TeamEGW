@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -20,24 +21,16 @@ public class return_button : MonoBehaviour
         button.onClick.AddListener(() =>
         {
             Panel.SetActive(false);
-            StartCoroutine(num());
+            Invoke(nameof(ResumeGame), 3f);
         });
   
        
     }
 
-    IEnumerator num()
+    public void ResumeGame()
     {
-        while (count >= 0)
-        {
-            Debug.Log(count);
-            yield return new WaitForSeconds(1f);
-            count--;
-        }
-        if (count == 0)
-        {
-            audioSource.UnPause();
-            Esc.time = true;
-        }
+        Debug.Log("AAAAAAAAA");
+        audioSource.Play();
+        Esc.pause = false;
     }
 }

@@ -5,7 +5,6 @@ using UnityEngine;
 public class horse_anime : MonoBehaviour
 {
     Animator animator;
-
     string normal = "真打ウマバシリ改";
     string jump = "Jump_Animation";
     string now_anime = "";
@@ -21,6 +20,8 @@ public class horse_anime : MonoBehaviour
 
     void Update()
     {
+        if(Esc.pause)return;
+
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0); //アニメーションの現状を変数
         if (Input.GetKeyDown(KeyCode.Space))
         {

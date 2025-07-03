@@ -8,11 +8,13 @@ public class Esc : MonoBehaviour
 {
     public GameObject Panel;
     public AudioSource audioSource;  //çƒê∂íÜAudioSource
-    public bool time = true;
+    public static bool pause = false;
+    public float time = 0;
     // Start is called before the first frame update
-    void Start()
+
+    public static class GameStateManager
     {
-     
+        public static bool pause = false;
     }
 
     // Update is called once per frame
@@ -22,10 +24,9 @@ public class Esc : MonoBehaviour
         {
             Panel.SetActive(true);
             Debug.Log("Button clicked!");
-            time = false;
             audioSource.Pause();
+            GameStateManager.pause = true;
+            pause = true;
         }
-     
-   
     }
 }

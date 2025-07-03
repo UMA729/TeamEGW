@@ -15,6 +15,8 @@ public class Notes : MonoBehaviour
     }
     void Update()
     {
+        if (Esc.pause) return;
+
         if (Time.timeSinceLevelLoad > 4f)
         {
             start = true;

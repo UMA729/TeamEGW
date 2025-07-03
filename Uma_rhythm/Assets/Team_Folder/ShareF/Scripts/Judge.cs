@@ -55,6 +55,8 @@ public class Judge : MonoBehaviour
 
     void Update()
     {
+        if (Esc.pause) return;
+
         if (GManager.instance.Start)
         {
             //if(end_time+GManager.instance.StartTime-Time.time > 0)

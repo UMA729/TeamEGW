@@ -9,7 +9,13 @@ public class Esc : MonoBehaviour
     public GameObject Panel;
     public AudioSource audioSource;  //Ä¶’†AudioSource
     public static bool pause = false;
-    public float time = 0;
+
+    private int s = 0;
+    private bool isPaused = false;
+    private bool isResuming = false;
+    private float time = 0f;
+    private float waittime = 3f;
+
     // Start is called before the first frame update
 
     public static class GameStateManager
@@ -22,11 +28,48 @@ public class Esc : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Panel.SetActive(true);
-            Debug.Log("Button clicked!");
-            audioSource.Pause();
-            GameStateManager.pause = true;
-            pause = true;
+            if (!isPaused)
+            {
+                isPaused = true;
+                s = 1;
+
+                Panel.SetActive(!Panel.activeSelf);
+                Debug.Log("Button clicked!");
+                audioSource.Pause();
+
+                Time.timeScale = 0;
+
+            }
+            else if (!isResuming)
+            {
+                Panel.SetActive(!Panel.activeSelf);
+
+                isResuming = true;
+                time = 0f;
+            }
+
         }
+
+        if (isResuming)
+        {
+            time += Time.unscaledDeltaTime;
+
+            if (time >= waittime)
+            {
+                isPaused = false;
+                isResuming = false;
+                s = 0;
+                time = 0f;
+                audioSource.UnPause();
+
+                Debug.Log("Button");
+
+                Time.timeScale = 1;
+
+            }
+        }
+
+
+
     }
 }

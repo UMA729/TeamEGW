@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ChangeScene : MonoBehaviour
+public class ChangeScene2 : MonoBehaviour
 {
     //ƒV[ƒ“‚Ìs‚«æ
     public Button myButton;
@@ -37,7 +37,7 @@ public class ChangeScene : MonoBehaviour
     public void OnButtonClick()
     {
         AudioSource.Play();
-        Invoke("SceneChange", 0.01f);
+        //Invoke("SceneChange", 0.0f);
         Debug.Log("Button clicked!");
 
     }

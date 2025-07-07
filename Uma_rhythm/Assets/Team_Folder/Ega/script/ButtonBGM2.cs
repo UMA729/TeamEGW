@@ -16,6 +16,7 @@ public class ButtonBGM2 : MonoBehaviour, IPointerEnterHandler ,IPointerExitHandl
         audioSource.clip = hoverSound;
     }
 
+    //カーソルがボタンに触れたら動く
     public void OnPointerEnter(PointerEventData eventData)
     {
         Debug.Log("マウスが" + gameObject.name + "に触れた");
@@ -26,7 +27,7 @@ public class ButtonBGM2 : MonoBehaviour, IPointerEnterHandler ,IPointerExitHandl
         }
     }
 
-
+    //カーソルがボタンから離れたら動く
     public void OnPointerExit(PointerEventData eventData)
     {
         Debug.Log("マウスが" + gameObject.name + "から離れた");

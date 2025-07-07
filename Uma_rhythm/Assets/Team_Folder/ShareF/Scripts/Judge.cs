@@ -13,6 +13,9 @@ public class Judge : MonoBehaviour
     public string resultScene;
     public Text ScoreText;
 
+    public float Speed = 5; //Playerのスピード
+    public Vector3 Originalpos;
+
 
     int cnt = 0;
 
@@ -130,6 +133,8 @@ public class Judge : MonoBehaviour
         if (timeLag <= 0.1f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.05秒以下だったら
         {
             //Debug.Log("Perfect");
+            transform.position += Vector3.left * Speed;
+
             GManager.instance.perfect++;
             GManager.instance.combo++;
             if (GManager.instance.combo >= GManager.instance.maxcombo)
@@ -156,6 +161,9 @@ public class Judge : MonoBehaviour
         else if (timeLag <= 0.5f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.5秒以下だったら
         {
             //Debug.Log("Bad");
+            transform.position += Vector3.right * Speed;
+
+
             GManager.instance.bad++;
             GManager.instance.combo = 0;
             GManager.instance.score += 100;

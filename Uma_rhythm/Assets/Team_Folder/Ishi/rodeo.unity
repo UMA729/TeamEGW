@@ -1614,6 +1614,7 @@ GameObject:
   - component: {fileID: 1666499278}
   - component: {fileID: 1666499277}
   - component: {fileID: 1666499276}
+  - component: {fileID: 1666499280}
   m_Layer: 0
   m_Name: "\u771F\u6253\u30A6\u30DE\u30D0\u30B7\u30EA\u6539\uFF11\u6843\u30A6\u30DE
     (4)"
@@ -1721,6 +1722,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1666499280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666499275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f4ba77711d81454eb7cf44509cd7a4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 5
+  Originalpos: {x: -5, y: 2.5, z: 0}
 --- !u!1 &1832740913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2179,14 +2194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0b699a872299c499996e3cba874000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreText: {fileID: 0}
-  PerfectText: {fileID: 0}
-  GoodText: {fileID: 0}
-  BadText: {fileID: 0}
-  MissText: {fileID: 0}
   RealScoreText: {fileID: 388683891}
   ComboText: {fileID: 514406231}
-  MaxComboText: {fileID: 0}
   TextCombo: {fileID: 36889319}
   TextCombo2: {fileID: 514406230}
 --- !u!1 &2141132829

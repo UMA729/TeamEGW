@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,12 +14,17 @@ public class cloud : MonoBehaviour
     void Start()
     {
         img_pos = cloudman.anchoredPosition;
+        cloudman.anchoredPosition = new Vector2(1110, 308);
     }
 
     // Update is called once per frame
     void Update()
     {
         cloudman.anchoredPosition -= new Vector2(img_speed, 0) * Time.deltaTime;
-        if (cloudman.anchoredPosition.x <= img_pos.x + ResetPos) ;
+        if (cloudman.anchoredPosition.x <= ResetPos)
+        {
+            cloudman.anchoredPosition = img_pos;
+        }
+
     }
 }

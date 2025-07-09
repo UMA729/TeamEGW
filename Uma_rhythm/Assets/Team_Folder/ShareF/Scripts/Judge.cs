@@ -17,7 +17,10 @@ public class Judge : MonoBehaviour
     public float Speed = 5; //Playerのスピード
     public Vector3 Originalpos;
 
+    public ParticleSystem perfectParticle;
 
+    int efect = 0;
+    int efect2;
     int cnt = 0;
 
     float end_time = 0.0f;
@@ -60,6 +63,12 @@ public class Judge : MonoBehaviour
     void Update()
     {
         if (Esc.pause) return;
+
+        if (efect < efect2)
+        {
+            perfectParticle.Play();
+            efect2 = 0;
+        }
 
         if (GManager.instance.Start)
         {
@@ -134,9 +143,10 @@ public class Judge : MonoBehaviour
     {
         if (timeLag <= 0.1f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.05秒以下だったら
         {
+            efect2++;
+
             //Debug.Log("Perfect");
             transform.position += Vector3.left * Speed;
-
             GManager.instance.perfect++;
             GManager.instance.combo++;
             if (GManager.instance.combo >= GManager.instance.maxcombo)
@@ -144,6 +154,7 @@ public class Judge : MonoBehaviour
                 GManager.instance.maxcombo = GManager.instance.combo;
             }
             GManager.instance.score += 1000;
+
             message(0);
             deleteData();
             //umarank.UmaRankP();

@@ -10,7 +10,6 @@ public class Esc : MonoBehaviour
     public AudioSource audioSource;  //çƒê∂íÜAudioSource
     public static bool pause = false;
 
-    private int s = 0;
     private bool isPaused = false;
     private bool isResuming = false;
     private float time = 0f;
@@ -31,7 +30,6 @@ public class Esc : MonoBehaviour
             if (!isPaused)
             {
                 isPaused = true;
-                s = 1;
 
                 Panel.SetActive(!Panel.activeSelf);
                 Debug.Log("Button clicked!");
@@ -58,7 +56,6 @@ public class Esc : MonoBehaviour
             {
                 isPaused = false;
                 isResuming = false;
-                s = 0;
                 time = 0f;
                 audioSource.UnPause();
 

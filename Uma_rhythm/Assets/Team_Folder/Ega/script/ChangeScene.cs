@@ -23,6 +23,7 @@ public class ChangeScene : MonoBehaviour
 
         if (myButton != null)
         {
+            Time.timeScale = 1;
 
             myButton.onClick.AddListener(OnButtonClick);
         }

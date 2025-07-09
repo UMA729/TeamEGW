@@ -21,26 +21,24 @@ public class umarank : MonoBehaviour
         transform.position = Originalpos;
     }
 
-
-    void Judgement(float timeLag)
+    public void UmaRankP()
     {
-        if (timeLag <= 0.1f)//–{—ˆƒm[ƒc‚ð‚½‚½‚­‚×‚«ŽžŠÔ‚ÆŽÀÛ‚Éƒm[ƒc‚ð‚½‚½‚¢‚½ŽžŠÔ‚ÌŒë·‚ª0.05•bˆÈ‰º‚¾‚Á‚½‚ç
-        {
-            Debug.Log("AƒL[‚ª‰Ÿ‚³‚ê‚Ä‚¢‚Ü‚·");
-            transform.position += Vector3.left * Speed;
-
-        }
-        else if (timeLag <= 0.2f)//–{—ˆƒm[ƒc‚ð‚½‚½‚­‚×‚«ŽžŠÔ‚ÆŽÀÛ‚Éƒm[ƒc‚ð‚½‚½‚¢‚½ŽžŠÔ‚ÌŒë·‚ª0.3•bˆÈ‰º‚¾‚Á‚½‚ç
-        {
-
-        }
-        else if (timeLag <= 0.5f)//–{—ˆƒm[ƒc‚ð‚½‚½‚­‚×‚«ŽžŠÔ‚ÆŽÀÛ‚Éƒm[ƒc‚ð‚½‚½‚¢‚½ŽžŠÔ‚ÌŒë·‚ª0.5•bˆÈ‰º‚¾‚Á‚½‚ç
-        {
-            Debug.Log("DƒL[‚ª‰Ÿ‚³‚ê‚Ä‚¢‚Ü‚·");
-            transform.position += Vector3.right * Speed;
-
-        }
-
+        transform.position += Vector3.left * Speed;
+        transform.position += Vector3.right * Speed;
     }
-
+    public void UmaRankG()
+    {
+        transform.position += Vector3.left * Speed;
+        transform.position += Vector3.right * Speed;
+    }
+    public void UmaRankB()
+    {
+        transform.position += Vector3.left * Speed;
+        transform.position += Vector3.right * Speed;
+    }
+    public void UmaRankM()
+    {
+        transform.position += Vector3.left * Speed;
+        transform.position += Vector3.right * Speed;
+    }
 }

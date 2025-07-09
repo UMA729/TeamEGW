@@ -10,6 +10,7 @@ public class Judge : MonoBehaviour
 {
     [SerializeField] private GameObject[] MessageObj;
     [SerializeField] NotesManager notesManager;
+    umarank umarank;
     public string resultScene;
     public Text ScoreText;
 
@@ -118,6 +119,7 @@ public class Judge : MonoBehaviour
                 message(3);
                 deleteData();
                 //Debug.Log("Miss");
+                //umarank.UmaRankM();
                 //É~ÉX
             }
 
@@ -144,6 +146,7 @@ public class Judge : MonoBehaviour
             GManager.instance.score += 1000;
             message(0);
             deleteData();
+            //umarank.UmaRankP();
         }
         else if (timeLag <= 0.2f)//ñ{óàÉmÅ[ÉcÇÇΩÇΩÇ≠Ç◊Ç´éûä‘Ç∆é¿ç€Ç…ÉmÅ[ÉcÇÇΩÇΩÇ¢ÇΩéûä‘ÇÃåÎç∑Ç™0.3ïbà»â∫ÇæÇ¡ÇΩÇÁ
         {
@@ -157,6 +160,7 @@ public class Judge : MonoBehaviour
             GManager.instance.score += 500;
             message(1);
             deleteData();
+            //umarank.UmaRankG();
         }
         else if (timeLag <= 0.5f)//ñ{óàÉmÅ[ÉcÇÇΩÇΩÇ≠Ç◊Ç´éûä‘Ç∆é¿ç€Ç…ÉmÅ[ÉcÇÇΩÇΩÇ¢ÇΩéûä‘ÇÃåÎç∑Ç™0.5ïbà»â∫ÇæÇ¡ÇΩÇÁ
         {
@@ -169,6 +173,7 @@ public class Judge : MonoBehaviour
             GManager.instance.score += 100;
             message(2);
             deleteData();
+            //umarank.UmaRankB();
         }
   
     }

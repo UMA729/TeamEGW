@@ -39,7 +39,7 @@ public class ChangeScene : MonoBehaviour
     {
         AudioSource.Play();
         Invoke("SceneChange", 0.01f);
-        Debug.Log("Button clicked!");
+        Debug.Log("Buttonclicked!");
 
     }
 

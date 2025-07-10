@@ -10,7 +10,7 @@ public class Judge : MonoBehaviour
 {
     [SerializeField] private GameObject[] MessageObj;
     [SerializeField] NotesManager notesManager;
-    umarank umarank;
+    [SerializeField] test_horserun run;
     public string resultScene;
     public Text ScoreText;
 
@@ -56,6 +56,7 @@ public class Judge : MonoBehaviour
     }
     void Start()
     {
+        run = FindObjectOfType<test_horserun>();
         end_time = notesManager.NotesTime[notesManager.NotesTime.Count-1];
         cnt = 0;
     }
@@ -64,10 +65,14 @@ public class Judge : MonoBehaviour
     {
         if (Esc.pause) return;
 
-        if (efect < efect2)
+        if (perfectParticle != null)
         {
-            perfectParticle.Play();
-            efect2 = 0;
+            if (efect < efect2)
+            {
+
+                perfectParticle.Play();
+                efect2 = 0;
+            }
         }
 
         if (GManager.instance.Start)
@@ -125,6 +130,7 @@ public class Judge : MonoBehaviour
             {
                 GManager.instance.combo = 0;
                 GManager.instance.miss++;
+                run.UmaSpeed(3);
                 message(3);
                 deleteData();
                 //Debug.Log("Miss");
@@ -146,7 +152,6 @@ public class Judge : MonoBehaviour
             efect2++;
 
             //Debug.Log("Perfect");
-            transform.position += Vector3.left * Speed;
             GManager.instance.perfect++;
             GManager.instance.combo++;
             if (GManager.instance.combo >= GManager.instance.maxcombo)
@@ -155,6 +160,7 @@ public class Judge : MonoBehaviour
             }
             GManager.instance.score += 1000;
 
+            run.UmaSpeed(0);
             message(0);
             deleteData();
             //umarank.UmaRankP();
@@ -169,6 +175,7 @@ public class Judge : MonoBehaviour
                 GManager.instance.maxcombo = GManager.instance.combo;
             }
             GManager.instance.score += 500;
+            run.UmaSpeed(1);
             message(1);
             deleteData();
             //umarank.UmaRankG();
@@ -176,12 +183,11 @@ public class Judge : MonoBehaviour
         else if (timeLag <= 0.5f)//本来ノーツをたたくべき時間と実際にノーツをたたいた時間の誤差が0.5秒以下だったら
         {
             //Debug.Log("Bad");
-            transform.position += Vector3.right * Speed;
-
 
             GManager.instance.bad++;
             GManager.instance.combo = 0;
             GManager.instance.score += 100;
+            run.UmaSpeed(2);
             message(2);
             deleteData();
             //umarank.UmaRankB();
@@ -208,6 +214,7 @@ public class Judge : MonoBehaviour
         notesManager.NotesTime.RemoveAt(0);
         notesManager.LaneNum.RemoveAt(0);
         notesManager.NoteType.RemoveAt(0);
+        notesManager.allNum.RemoveAt(0);
         cnt++;
     }
 
@@ -222,6 +229,7 @@ public class Judge : MonoBehaviour
 
     void Result()
     {
+        if(resultScene != null)
         SceneManager.LoadScene(resultScene);//リザルトシーンへ移動
     }
 }

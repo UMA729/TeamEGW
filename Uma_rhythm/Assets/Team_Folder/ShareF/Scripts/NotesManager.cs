@@ -32,6 +32,7 @@ public class NotesManager : MonoBehaviour
     public string testS;
 
     public List<int> LaneNum = new List<int>();
+    public List<int> allNum = new List<int>();
     public List<int> NoteType = new List<int>();
     public List<float> NotesTime = new List<float>();
     public List<GameObject> NotesObj = new List<GameObject>();
@@ -64,16 +65,19 @@ public class NotesManager : MonoBehaviour
             NotesTime.Add(time);
             LaneNum.Add(inputJson.notes[i].block);
             NoteType.Add(inputJson.notes[i].type);
+            allNum.Add(i);
 
             float x = NotesTime[i] * NotesSpeed;
 
             for (int j = 0; j < noteObj.Length; j++)
             {
                 if (NoteType[i] == j + 1)
+                {
                     NotesObj.Add(Instantiate(noteObj[j], new Vector3(x, 0.55f, 1.5f), Quaternion.identity));
+                }
             }
-            if(i==inputJson.notes.Length-1)
-            NotesObj.Add(Instantiate(noteObj[5], new Vector3(x+5, 0.55f, 1.5f), Quaternion.identity));
+            //if(i==inputJson.notes.Length-1)
+            //NotesObj.Add(Instantiate(noteObj[5], new Vector3(x+5, 0.55f, 1.5f), Quaternion.identity));
 
         }
     }

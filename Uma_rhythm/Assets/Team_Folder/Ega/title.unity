@@ -375,6 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4feb599ae11065419dc6d174eae99b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Esc: {fileID: 0}
   Panel: {fileID: 1462584388}
   audioSource: {fileID: 665251417}
   button: {fileID: 562635198}
@@ -1734,3 +1735,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Panel: {fileID: 1462584388}
   audioSource: {fileID: 665251417}
+  textobj: {fileID: 0}
+  Text: {fileID: 0}

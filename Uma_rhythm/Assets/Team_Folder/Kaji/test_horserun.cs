@@ -15,6 +15,8 @@ public class test_horserun : MonoBehaviour
     {
         notes = FindObjectOfType<NotesManager>();
         SpeedNum += notes.noteNum;
+        if (Hol == false)
+            RunSpeed = 3;
     }
 
     // Update is called once per frame
@@ -24,10 +26,6 @@ public class test_horserun : MonoBehaviour
         {
             transform.position += Vector3.right * RunSpeed * Time.deltaTime;
 
-            if (Hol == false)
-            {
-                esc(0);
-            }
         }
     }
 
@@ -35,31 +33,37 @@ public class test_horserun : MonoBehaviour
     {
         if (judge == 0)
         {
-            esc(5f/SpeedNum);
-            holder(5f/SpeedNum);
+            if (Hol == false)
+                esc(5f/SpeedNum);
+            else if(Hol == true)
+                holder(5f / SpeedNum);
         }
         else if (judge == 1)
         {
-            esc(3f / SpeedNum);
-            holder(3f / SpeedNum);
+            if (Hol == false)
+                esc(3f / SpeedNum);
+            else if(Hol==true)
+                holder(3f / SpeedNum);
         }
         else if (judge == 2)
         {
-            holder(-3f/SpeedNum);
+            if (Hol == true)
+                holder(-3f/SpeedNum);
         }
         else if (judge == 3)
         {
-            holder(-4f/SpeedNum);
+            if (Hol == true)
+                holder(-4f/SpeedNum);
         }
     }
 
     void esc(float speed)
     {
-        RunSpeed = 3;
         sumspeed += speed;
 
         if (notes.noteNum * 0.6 < notes.allNum[0])
         {
+            Debug.Log("‚ ");
             RunSpeed = -sumspeed;
         }
 
@@ -67,7 +71,8 @@ public class test_horserun : MonoBehaviour
 
     void holder(float speed)
     {
-        if (notes.noteNum * 0.7 < notes.allNum[0])
+        Debug.Log(notes.allNum[0]);
+        if (notes.noteNum * 0.5 < notes.allNum[0])
         {
             Debug.Log(RunSpeed);
 

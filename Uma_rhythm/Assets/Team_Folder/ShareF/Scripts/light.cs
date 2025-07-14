@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class light : MonoBehaviour
@@ -32,23 +33,27 @@ public class light : MonoBehaviour
             rend.material.color = new Color(rend.material.color.r, rend.material.color.r, rend.material.color.r, Alfa);
         }
 
-        if (Input.GetKeyDown("up") ||
+        if (Time.timeScale == 1)
+        {
+            if (Input.GetKeyDown("up") ||
             Input.GetKeyDown("down") ||
             Input.GetKeyDown("left") ||
-            Input.GetKeyDown("right")||
-            Input.GetKeyDown(KeyCode.W)||
-            Input.GetKeyDown(KeyCode.A)||
-            Input.GetKeyDown(KeyCode.S)||
-            Input.GetKeyDown(KeyCode.D)||
+            Input.GetKeyDown("right") ||
+            Input.GetKeyDown(KeyCode.W) ||
+            Input.GetKeyDown(KeyCode.A) ||
+            Input.GetKeyDown(KeyCode.S) ||
+            Input.GetKeyDown(KeyCode.D) ||
             Input.GetKeyDown(KeyCode.Space))
-        {
-            color_change();
-            if (audioSource.clip != null)
             {
-                Debug.Log("a");
-                audioSource.Play();
+                color_change();
+                if (audioSource.clip != null)
+                {
+                    Debug.Log("a");
+                    audioSource.Play();
+                }
             }
         }
+
 
         Alfa -= Speed * Time.deltaTime;
     }

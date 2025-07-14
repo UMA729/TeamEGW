@@ -22,25 +22,32 @@ public class horse_anime : MonoBehaviour
     {
         if(Esc.pause)return;
 
-        AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0); //アニメーションの現状を変数
-        if (Input.GetKeyDown(KeyCode.Space))
+        if(Time.timeScale == 1)
         {
-            now_anime = jump;
-        }
-        // アニメーションが終了しているか確認
-        if (stateInfo.IsName("Jump_Animation") && stateInfo.normalizedTime >= 1.0f)
-        {
-            Debug.Log("アニメーションが終了しました");
-            // アニメーション終了後の処理
-            now_anime = normal;
+            AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0); //アニメーションの現状を変数
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                now_anime = jump;
+            }
+            // アニメーションが終了しているか確認
+            if (stateInfo.IsName("Jump_Animation") && stateInfo.normalizedTime >= 1.0f)
+            {
+                Debug.Log("アニメーションが終了しました");
+                // アニメーション終了後の処理
+                now_anime = normal;
+            }
+
+            if (old_anime != now_anime)
+            {
+                old_anime = now_anime;
+                animator.Play(now_anime);
+            }
+
         }
 
 
 
-        if (old_anime != now_anime)
-        {
-            old_anime = now_anime;
-            animator.Play(now_anime);
-        }
+
+
     }
 }

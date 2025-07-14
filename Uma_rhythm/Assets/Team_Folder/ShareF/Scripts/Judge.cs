@@ -81,7 +81,7 @@ public class Judge : MonoBehaviour
                 Invoke("Result", 2f);//ノーツの終わり2秒後にリザルト関数へ
                 return;
             }
-            else
+            else if(Time.timeScale == 1)
             {
                 if (notesManager.NoteType[0] == 1)
                 {

@@ -851,7 +851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.297638, y: -1.949997}
+  m_AnchoredPosition: {x: -4.297638, y: -1.9499817}
   m_SizeDelta: {x: -105, y: -59.587402}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &574691292
@@ -1223,8 +1223,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 155.66, y: -6.0333276}
-  m_SizeDelta: {x: 80.71, y: 30}
+  m_AnchoredPosition: {x: 396.7, y: 223.6}
+  m_SizeDelta: {x: 96.37, y: 41.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129687753
 MonoBehaviour:
@@ -1239,7 +1239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 0.95592266, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1248,7 +1248,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 96bd8739f66de2a4e8d92c2c2f666b47, type: 3}
-    m_FontSize: 25
+    m_FontSize: 40
     m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 0
@@ -1665,8 +1665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.23333333}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -96, y: 1.1999998}
-  m_SizeDelta: {x: 89.85, y: 22}
+  m_AnchoredPosition: {x: -95.6, y: 4}
+  m_SizeDelta: {x: 87.61, y: 33.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1502964228
 MonoBehaviour:
@@ -1681,7 +1681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 0.9568628, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1690,7 +1690,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 96bd8739f66de2a4e8d92c2c2f666b47, type: 3}
-    m_FontSize: 25
+    m_FontSize: 40
     m_FontStyle: 3
     m_BestFit: 0
     m_MinSize: 0

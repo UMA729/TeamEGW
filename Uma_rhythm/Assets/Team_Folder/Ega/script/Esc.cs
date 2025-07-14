@@ -11,8 +11,8 @@ public class Esc : MonoBehaviour
     public Text Text;
     public static bool pause = false;
 
-    private bool isPaused = false;
-    private bool isResuming = false;
+    public static bool isPaused = false;
+    public static bool isResuming = false;
     private float time = 0f;
     private float nowtime = 0f;
     private float waittime = 3f;

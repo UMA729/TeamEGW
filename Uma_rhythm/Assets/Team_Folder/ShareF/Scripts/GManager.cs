@@ -39,14 +39,21 @@ public class GManager : MonoBehaviour
         
     }
 
-    public  void DeleteData()
+    public  void resetData()
     {
-
-        GManager.instance.score = 0;
-        GManager.instance.perfect = 0;
-        GManager.instance.good = 0;
-        GManager.instance.bad = 0;
-        GManager.instance.miss = 0;
-        GManager.instance.combo = 0;
+        if (Esc.isResuming)
+        {
+            Esc.isResuming = false;
+        }
+        if (Esc.isPaused)
+        {
+            Esc.isPaused = false;
+        }
+        score = 0;
+        perfect = 0;
+        good = 0;
+        bad = 0;
+        miss = 0;
+        combo = 0;
     }
 }

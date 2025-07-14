@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ChangeScene : MonoBehaviour
+public class chenge : MonoBehaviour
 {
     //シーンの行き先
     public Button myButton;
@@ -28,6 +28,7 @@ public class ChangeScene : MonoBehaviour
             Esc.isResuming = false;
             myButton.onClick.AddListener(OnButtonClick);
 
+
         }
         else
         {
@@ -48,7 +49,11 @@ public class ChangeScene : MonoBehaviour
     //ボタンから呼び出す関数
     public void SceneChange()
     {
+        GManager.instance.score = 0;
+
         SceneManager.LoadScene(sceneName);
+        Debug.Log("スコア警察");
+
     }
 
 }

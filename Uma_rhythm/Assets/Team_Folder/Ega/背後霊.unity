@@ -6605,7 +6605,7 @@ GameObject:
   - component: {fileID: 1360045237}
   - component: {fileID: 1360045236}
   - component: {fileID: 1360045235}
-  - component: {fileID: 1360045234}
+  - component: {fileID: 1360045238}
   m_Layer: 5
   m_Name: End (1)
   m_TagString: Untagged
@@ -6633,21 +6633,6 @@ RectTransform:
   m_AnchoredPosition: {x: -239, y: -140}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1360045234
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1360045232}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c965e9dc91d2b8a44bfbf778c1e49367, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myButton: {fileID: 0}
-  sceneName: select
-  AudioClip: {fileID: 0}
 --- !u!114 &1360045235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6692,8 +6677,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1360045234}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+      - m_Target: {fileID: 1360045238}
+        m_TargetAssemblyTypeName: chenge, Assembly-CSharp
         m_MethodName: SceneChange
         m_Mode: 1
         m_Arguments:
@@ -6742,6 +6727,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360045232}
   m_CullTransparentMesh: 1
+--- !u!114 &1360045238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1360045232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6fb81b80db51f14291e02b74e54953f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myButton: {fileID: 0}
+  sceneName: select
+  AudioClip: {fileID: 0}
 --- !u!1 &1381581435
 GameObject:
   m_ObjectHideFlags: 0
@@ -8354,6 +8354,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2593266633291944115, guid: 8437dd21a743eb8409a5008837cfba2a, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593266633291944115, guid: 8437dd21a743eb8409a5008837cfba2a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2593266633291944115, guid: 8437dd21a743eb8409a5008837cfba2a, type: 3}
+      propertyPath: m_Color.r
+      value: 0.97952497
+      objectReference: {fileID: 0}
     - target: {fileID: 2593266633291944125, guid: 8437dd21a743eb8409a5008837cfba2a, type: 3}
       propertyPath: m_Name
       value: "\u9B42\uFF11\u4E0B\u77E2\u5370"
@@ -8415,6 +8427,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4103357581778418143, guid: 7220409d0ad70d94cba9bbad5d3413ff, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103357581778418143, guid: 7220409d0ad70d94cba9bbad5d3413ff, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4103357581778418143, guid: 7220409d0ad70d94cba9bbad5d3413ff, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7220409d0ad70d94cba9bbad5d3413ff, type: 3}
 --- !u!1001 &4703850837985151983
@@ -8466,6 +8490,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4703850838034306190, guid: 385362dfccb9e5c45bfb1c247a339fbf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703850838034306191, guid: 385362dfccb9e5c45bfb1c247a339fbf, type: 3}
+      propertyPath: m_Color.b
+      value: 0.085913844
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703850838034306191, guid: 385362dfccb9e5c45bfb1c247a339fbf, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6226415
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703850838034306191, guid: 385362dfccb9e5c45bfb1c247a339fbf, type: 3}
+      propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4703850838034306225, guid: 385362dfccb9e5c45bfb1c247a339fbf, type: 3}

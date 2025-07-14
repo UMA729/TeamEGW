@@ -11,6 +11,10 @@ public class light : MonoBehaviour
     AudioSource audioSource;
     Renderer rend;
     private float Alfa = 0;
+
+    private float time = 0f;
+    private float waittime = 3f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,25 +37,32 @@ public class light : MonoBehaviour
             rend.material.color = new Color(rend.material.color.r, rend.material.color.r, rend.material.color.r, Alfa);
         }
 
-        if (Time.timeScale == 1)
+        if (Esc.isResuming)
         {
-            if (Input.GetKeyDown("up") ||
-            Input.GetKeyDown("down") ||
-            Input.GetKeyDown("left") ||
-            Input.GetKeyDown("right") ||
-            Input.GetKeyDown(KeyCode.W) ||
-            Input.GetKeyDown(KeyCode.A) ||
-            Input.GetKeyDown(KeyCode.S) ||
-            Input.GetKeyDown(KeyCode.D) ||
-            Input.GetKeyDown(KeyCode.Space))
+            time += Time.unscaledDeltaTime;
+            if (time >= waittime)
             {
-                color_change();
-                if (audioSource.clip != null)
+                if (Input.GetKeyDown("up") ||
+                    Input.GetKeyDown("down") ||
+                    Input.GetKeyDown("left") ||
+                    Input.GetKeyDown("right") ||
+                    Input.GetKeyDown(KeyCode.W) ||
+                    Input.GetKeyDown(KeyCode.A) ||
+                    Input.GetKeyDown(KeyCode.S) ||
+                    Input.GetKeyDown(KeyCode.D) ||
+                    Input.GetKeyDown(KeyCode.Space))
                 {
-                    Debug.Log("a");
-                    audioSource.Play();
+                    color_change();
+                    if (audioSource.clip != null)
+                    {
+                        Debug.Log("a");
+                        audioSource.Play();
+                    }
                 }
+
             }
+
+
         }
 
 

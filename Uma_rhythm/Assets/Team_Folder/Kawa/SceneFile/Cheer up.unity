@@ -572,7 +572,7 @@ GameObject:
   - component: {fileID: 420680180}
   - component: {fileID: 420680179}
   - component: {fileID: 420680178}
-  - component: {fileID: 420680177}
+  - component: {fileID: 420680181}
   m_Layer: 5
   m_Name: End (1)
   m_TagString: Untagged
@@ -600,21 +600,6 @@ RectTransform:
   m_AnchoredPosition: {x: -239, y: -140}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &420680177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 420680175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c965e9dc91d2b8a44bfbf778c1e49367, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myButton: {fileID: 0}
-  sceneName: select
-  AudioClip: {fileID: 0}
 --- !u!114 &420680178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,8 +644,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 420680177}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+      - m_Target: {fileID: 420680181}
+        m_TargetAssemblyTypeName: chenge, Assembly-CSharp
         m_MethodName: SceneChange
         m_Mode: 1
         m_Arguments:
@@ -709,6 +694,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420680175}
   m_CullTransparentMesh: 1
+--- !u!114 &420680181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 420680175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6fb81b80db51f14291e02b74e54953f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myButton: {fileID: 0}
+  sceneName: select
+  AudioClip: {fileID: 0}
 --- !u!198 &493434504 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 2569131616686888787, guid: d223b3410f6104744b913a44fbb7a4ee, type: 3}
@@ -851,7 +851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.2976685, y: -1.9499664}
+  m_AnchoredPosition: {x: -4.2976685, y: -1.9499359}
   m_SizeDelta: {x: -105, y: -59.587402}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &574691292

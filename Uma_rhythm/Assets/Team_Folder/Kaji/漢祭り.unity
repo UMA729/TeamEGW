@@ -732,7 +732,7 @@ GameObject:
   - component: {fileID: 464534729}
   - component: {fileID: 464534728}
   - component: {fileID: 464534727}
-  - component: {fileID: 464534726}
+  - component: {fileID: 464534730}
   m_Layer: 5
   m_Name: End (1)
   m_TagString: Untagged
@@ -760,21 +760,6 @@ RectTransform:
   m_AnchoredPosition: {x: -239, y: -140}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &464534726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 464534724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c965e9dc91d2b8a44bfbf778c1e49367, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myButton: {fileID: 0}
-  sceneName: select
-  AudioClip: {fileID: 0}
 --- !u!114 &464534727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -819,8 +804,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 464534726}
-        m_TargetAssemblyTypeName: ChangeScene, Assembly-CSharp
+      - m_Target: {fileID: 464534730}
+        m_TargetAssemblyTypeName: chenge, Assembly-CSharp
         m_MethodName: SceneChange
         m_Mode: 1
         m_Arguments:
@@ -869,6 +854,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 464534724}
   m_CullTransparentMesh: 1
+--- !u!114 &464534730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464534724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6fb81b80db51f14291e02b74e54953f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myButton: {fileID: 0}
+  sceneName: select
+  AudioClip: {fileID: 0}
 --- !u!1 &518841014
 GameObject:
   m_ObjectHideFlags: 0

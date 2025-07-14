@@ -49,8 +49,7 @@ public class chenge : MonoBehaviour
     //ボタンから呼び出す関数
     public void SceneChange()
     {
-        GManager.instance.score = 0;
-
+        GManager.instance.resetData();
         SceneManager.LoadScene(sceneName);
         Debug.Log("スコア警察");
 

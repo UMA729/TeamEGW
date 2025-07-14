@@ -38,4 +38,15 @@ public class GManager : MonoBehaviour
         }
         
     }
+
+    public  void DeleteData()
+    {
+
+        GManager.instance.score = 0;
+        GManager.instance.perfect = 0;
+        GManager.instance.good = 0;
+        GManager.instance.bad = 0;
+        GManager.instance.miss = 0;
+        GManager.instance.combo = 0;
+    }
 }

@@ -10,6 +10,9 @@ public class horse_anime : MonoBehaviour
     string now_anime = "";
     string old_anime = "";
 
+    private float time = 0f;
+    private float waittime = 3f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +27,7 @@ public class horse_anime : MonoBehaviour
 
         if(Time.timeScale == 1)
         {
+
             AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0); //アニメーションの現状を変数
             if (Input.GetKeyDown(KeyCode.Space))
             {
@@ -42,6 +46,8 @@ public class horse_anime : MonoBehaviour
                 old_anime = now_anime;
                 animator.Play(now_anime);
             }
+
+
 
         }
 

@@ -22,6 +22,8 @@ public class Judge : MonoBehaviour
     int efect = 0;
     int efect2;
     int cnt = 0;
+    int P = 0, G = 0, B = 0, M = 0;
+    
 
     float end_time = 0.0f;
 
@@ -62,6 +64,7 @@ public class Judge : MonoBehaviour
 
     void Update()
     {
+ 
         if (Esc.pause) return;
 
         if (efect < efect2)
@@ -125,15 +128,37 @@ public class Judge : MonoBehaviour
             {
                 GManager.instance.combo = 0;
                 GManager.instance.miss++;
+                M = 1;
                 message(3);
                 deleteData();
                 //Debug.Log("Miss");
-                //umarank.UmaRankM();
                 //ƒ~ƒX
             }
 
+
         }
 
+        if (P == 1)
+        {
+            umarank.UmaRankP();
+            Debug.Log("wwwwwwwwwwwwwwwwwwwww");
+            P = 0;
+        }
+        if (G == 1)
+        {
+            umarank.UmaRankG();
+            G = 0;
+        }
+        if (B == 1)
+        {
+            umarank.UmaRankB();
+            B = 0;
+        }
+        if (M == 1)
+        {
+            umarank.UmaRankM();
+            M = 0;
+        }
         //ScoreText.text = string.Format("{0}", GManager.instance.score);
 
         //Debug.Log("Œ»ÝŽžŠÔT" + Time.time);
@@ -154,10 +179,11 @@ public class Judge : MonoBehaviour
                 GManager.instance.maxcombo = GManager.instance.combo;
             }
             GManager.instance.score += 1000;
+            P = 1;
 
             message(0);
             deleteData();
-            //umarank.UmaRankP();
+      
         }
         else if (timeLag <= 0.2f)//–{—ˆƒm[ƒc‚ð‚½‚½‚­‚×‚«ŽžŠÔ‚ÆŽÀÛ‚Éƒm[ƒc‚ð‚½‚½‚¢‚½ŽžŠÔ‚ÌŒë·‚ª0.3•bˆÈ‰º‚¾‚Á‚½‚ç
         {
@@ -169,9 +195,9 @@ public class Judge : MonoBehaviour
                 GManager.instance.maxcombo = GManager.instance.combo;
             }
             GManager.instance.score += 500;
+            G = 1;
             message(1);
             deleteData();
-            //umarank.UmaRankG();
         }
         else if (timeLag <= 0.5f)//–{—ˆƒm[ƒc‚ð‚½‚½‚­‚×‚«ŽžŠÔ‚ÆŽÀÛ‚Éƒm[ƒc‚ð‚½‚½‚¢‚½ŽžŠÔ‚ÌŒë·‚ª0.5•bˆÈ‰º‚¾‚Á‚½‚ç
         {
@@ -182,9 +208,9 @@ public class Judge : MonoBehaviour
             GManager.instance.bad++;
             GManager.instance.combo = 0;
             GManager.instance.score += 100;
+            B = 1;
             message(2);
             deleteData();
-            //umarank.UmaRankB();
         }
   
     }

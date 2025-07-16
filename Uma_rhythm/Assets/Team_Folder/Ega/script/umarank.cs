@@ -2,43 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UIElements;
 
 public class umarank : MonoBehaviour
 {
-
+    
     public float Speed = 5; //Playerのスピード
-
+    [SerializeField]Transform PtoG;
     public umarank(float speed)
     {
         Speed = speed;
     }
 
-    public Vector3 Originalpos;
+   
 
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = Originalpos;
     }
 
     public void UmaRankP()
     {
-        transform.position += Vector3.left * Speed;
-        transform.position += Vector3.right * Speed;
+        transform.position = Vector3.MoveTowards(transform.position,PtoG.position,Speed*Time.deltaTime);
+
+        Debug.Log("wwwww");
     }
     public void UmaRankG()
     {
-        transform.position += Vector3.left * Speed;
-        transform.position += Vector3.right * Speed;
+        transform.position = Vector3.MoveTowards(transform.position, PtoG.position, Speed * Time.deltaTime);
+
     }
     public void UmaRankB()
     {
-        transform.position += Vector3.left * Speed;
-        transform.position += Vector3.right * Speed;
+        Vector2 position = transform.position;
+        position.x -= Speed;
     }
     public void UmaRankM()
     {
-        transform.position += Vector3.left * Speed;
-        transform.position += Vector3.right * Speed;
+        Vector2 position = transform.position;
+        position.x -= Speed;
     }
 }

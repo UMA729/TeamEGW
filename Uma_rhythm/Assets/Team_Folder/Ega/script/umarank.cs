@@ -1,45 +1,68 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
-using UnityEngine.UIElements;
 
 public class umarank : MonoBehaviour
 {
-    
-    public float Speed = 5; //Playerのスピード
-    [SerializeField]Transform PtoG;
-    public umarank(float speed)
-    {
-        Speed = speed;
-    }
 
-   
+    public float Speed = 5; //Playerのスピード
+    public GameObject[] uma;
+    [SerializeField] Transform[] PtoG;
+
+
+    int rnd = 0;
+
+    public int speedmin = 0;
+    public int speedmax = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+
+    }
+
+    int SetRandom()
+    {
+        rnd = Random.Range(speedmin, speedmax);
+        return rnd;
     }
 
     public void UmaRankP()
     {
-        transform.position = Vector3.MoveTowards(transform.position,PtoG.position,-Speed*Time.deltaTime);
-
-        Debug.Log("wwwww");
+        for(int i=0;i<=1;i++)
+        {
+               Speed = SetRandom();
+        uma[i].transform.position = Vector3.MoveTowards(uma[i].transform.position, PtoG[i].position, -Speed * Time.deltaTime);
+        }
+   
+        Debug.Log("パフェ");
     }
     public void UmaRankG()
     {
-        transform.position = Vector3.MoveTowards(transform.position, PtoG.position, -Speed * Time.deltaTime);
+        for (int i = 0; i <= 1; i++)
+        {
+            Speed = SetRandom();
+            uma[i].transform.position = Vector3.MoveTowards(uma[i].transform.position, PtoG[i].position, -Speed * Time.deltaTime);
+        }
 
+        Debug.Log("パフェ");
     }
     public void UmaRankB()
     {
-        transform.position = Vector3.MoveTowards(transform.position, PtoG.position, Speed * Time.deltaTime);
+        for (int i = 0; i <= 1; i++)
+        {
+            Speed = SetRandom();
+            uma[i].transform.position = Vector3.MoveTowards(uma[i].transform.position, PtoG[i].position, Speed * Time.deltaTime);
+        }
 
+        Debug.Log("パフェ");
     }
     public void UmaRankM()
     {
-        transform.position = Vector3.MoveTowards(transform.position, PtoG.position, Speed * Time.deltaTime);
+        for (int i = 0; i <= 1; i++)
+        {
+            Speed = SetRandom();
+            uma[i].transform.position = Vector3.MoveTowards(uma[i].transform.position, PtoG[i].position, Speed * Time.deltaTime);
+        }
 
+        Debug.Log("パフェ");
     }
 }

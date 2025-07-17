@@ -58,6 +58,7 @@ public class Judge : MonoBehaviour
     }
     void Start()
     {
+        umarank = FindAnyObjectByType<umarank>();   
         end_time = notesManager.NotesTime[notesManager.NotesTime.Count-1];
         cnt = 0;
     }
@@ -140,8 +141,8 @@ public class Judge : MonoBehaviour
 
         if (P == 1)
         {
-            umarank.UmaRankP();
             Debug.Log("wwwwwwwwwwwwwwwwwwwww");
+            umarank.UmaRankP();
             P = 0;
         }
         if (G == 1)

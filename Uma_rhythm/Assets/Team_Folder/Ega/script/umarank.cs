@@ -23,23 +23,23 @@ public class umarank : MonoBehaviour
 
     public void UmaRankP()
     {
-        transform.position = Vector3.MoveTowards(transform.position,PtoG.position,Speed*Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position,PtoG.position,-Speed*Time.deltaTime);
 
         Debug.Log("wwwww");
     }
     public void UmaRankG()
     {
-        transform.position = Vector3.MoveTowards(transform.position, PtoG.position, Speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, PtoG.position, -Speed * Time.deltaTime);
 
     }
     public void UmaRankB()
     {
-        Vector2 position = transform.position;
-        position.x -= Speed;
+        transform.position = Vector3.MoveTowards(transform.position, PtoG.position, Speed * Time.deltaTime);
+
     }
     public void UmaRankM()
     {
-        Vector2 position = transform.position;
-        position.x -= Speed;
+        transform.position = Vector3.MoveTowards(transform.position, PtoG.position, Speed * Time.deltaTime);
+
     }
 }

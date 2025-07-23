@@ -37,36 +37,26 @@ public class light : MonoBehaviour
             rend.material.color = new Color(rend.material.color.r, rend.material.color.r, rend.material.color.r, Alfa);
         }
 
-        if (Esc.isResuming)
+        if (Input.GetKeyDown("up") ||
+            Input.GetKeyDown("down") ||
+            Input.GetKeyDown("left") ||
+            Input.GetKeyDown("right") ||
+            Input.GetKeyDown(KeyCode.W) ||
+            Input.GetKeyDown(KeyCode.A) ||
+            Input.GetKeyDown(KeyCode.S) ||
+            Input.GetKeyDown(KeyCode.D) ||
+            Input.GetKeyDown(KeyCode.Space))
         {
-            time += Time.unscaledDeltaTime;
-            if (time >= waittime)
+            color_change();
+            if (audioSource.clip != null)
             {
-                if (Input.GetKeyDown("up") ||
-                    Input.GetKeyDown("down") ||
-                    Input.GetKeyDown("left") ||
-                    Input.GetKeyDown("right") ||
-                    Input.GetKeyDown(KeyCode.W) ||
-                    Input.GetKeyDown(KeyCode.A) ||
-                    Input.GetKeyDown(KeyCode.S) ||
-                    Input.GetKeyDown(KeyCode.D) ||
-                    Input.GetKeyDown(KeyCode.Space))
-                {
-                    color_change();
-                    if (audioSource.clip != null)
-                    {
-                        Debug.Log("a");
-                        audioSource.Play();
-                    }
-                }
-
+                Debug.Log("a");
+                audioSource.Play();
             }
-
-
         }
 
-
         Alfa -= Speed * Time.deltaTime;
+
     }
 
     private void color_change()

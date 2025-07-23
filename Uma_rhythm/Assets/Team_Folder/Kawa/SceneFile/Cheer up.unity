@@ -951,7 +951,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.2976685, y: -1.9500885}
+  m_AnchoredPosition: {x: -4.2976685, y: -1.9500732}
   m_SizeDelta: {x: -105, y: -59.587402}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &574691292
@@ -1405,7 +1405,7 @@ MonoBehaviour:
   - {fileID: 1225598894}
   - {fileID: 1784188223}
   speedmin: 3
-  speedmax: 10
+  speedmax: 20
 --- !u!4 &1195101194
 Transform:
   m_ObjectHideFlags: 0

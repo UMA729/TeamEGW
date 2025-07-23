@@ -37,21 +37,25 @@ public class light : MonoBehaviour
             rend.material.color = new Color(rend.material.color.r, rend.material.color.r, rend.material.color.r, Alfa);
         }
 
-        if (Input.GetKeyDown("up") ||
-            Input.GetKeyDown("down") ||
-            Input.GetKeyDown("left") ||
-            Input.GetKeyDown("right") ||
-            Input.GetKeyDown(KeyCode.W) ||
-            Input.GetKeyDown(KeyCode.A) ||
-            Input.GetKeyDown(KeyCode.S) ||
-            Input.GetKeyDown(KeyCode.D) ||
-            Input.GetKeyDown(KeyCode.Space))
+        if (!Esc.isPaused)
         {
-            color_change();
-            if (audioSource.clip != null)
+
+            if (Input.GetKeyDown("up") ||
+                Input.GetKeyDown("down") ||
+                Input.GetKeyDown("left") ||
+                Input.GetKeyDown("right") ||
+                Input.GetKeyDown(KeyCode.W) ||
+                Input.GetKeyDown(KeyCode.A) ||
+                Input.GetKeyDown(KeyCode.S) ||
+                Input.GetKeyDown(KeyCode.D) ||
+                Input.GetKeyDown(KeyCode.Space))
             {
-                Debug.Log("a");
-                audioSource.Play();
+                color_change();
+                if (audioSource.clip != null)
+                {
+                    Debug.Log("a");
+                    audioSource.Play();
+                }
             }
         }
 

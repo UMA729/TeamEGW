@@ -8,14 +8,9 @@ using static Unity.VisualScripting.Member;
 public class Esc2 : MonoBehaviour
 {
     public GameObject Panel; // •\Ž¦‚µ‚½‚¢UIƒpƒlƒ‹
-    public AudioSource audioSource;  //Ä¶’†AudioSource
-    public Button myButton;
 
     private bool isPaused = false;
     private bool isResuming = false;
-    private int s = 0;
-    private float time = 0f;
-    private float waittime = 3f;
 
 
 
@@ -34,13 +29,10 @@ public class Esc2 : MonoBehaviour
             if(!isPaused)
             {
                 isPaused = true;
-                s = 1;
 
                 Panel.SetActive(!Panel.activeSelf);
                 Debug.Log("Button clicked!");
-                audioSource.Pause();
 
-                Time.timeScale = 0;
 
             }
             else if(!isResuming)
@@ -48,28 +40,20 @@ public class Esc2 : MonoBehaviour
                 Panel.SetActive(!Panel.activeSelf);
 
                 isResuming = true;
-                time = 0f;
             }
 
         }
 
         if(isResuming)
         {
-            time += Time.unscaledDeltaTime;
+            isPaused = false;
+            isResuming = false;
 
-            if (time >= waittime)
-            {
-                isPaused = false;
-                isResuming = false;
-                s = 0;
-                time = 0f;
-                audioSource.UnPause();
+            Debug.Log("Button");
 
-                Debug.Log("Button");
 
-                Time.timeScale = 1;
 
-            }
         }
+    
     }
 }

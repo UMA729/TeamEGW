@@ -41,6 +41,7 @@ public class GManager : MonoBehaviour
 
     public  void resetData()
     {
+        Debug.Log("‚è‚¹‚¦‚ñ‚Æ");
         if (Esc.isResuming)
         {
             Esc.isResuming = false;

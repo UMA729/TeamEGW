@@ -1777,7 +1777,7 @@ GameObject:
   - component: {fileID: 1545471558}
   - component: {fileID: 1545471557}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: NotesEx
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1800,8 +1800,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 410, y: 170}
-  m_SizeDelta: {x: 800, y: 450}
+  m_AnchoredPosition: {x: 410, y: 350}
+  m_SizeDelta: {x: 700, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1545471557
 MonoBehaviour:
@@ -2138,7 +2138,7 @@ GameObject:
   - component: {fileID: 1640828869}
   - component: {fileID: 1640828868}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: NotesNum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2152,7 +2152,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1640828866}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.0000741}
+  m_LocalPosition: {x: 0, y: 0, z: 0.9996911}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2161,8 +2161,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 400, y: 145}
-  m_SizeDelta: {x: 800, y: 400}
+  m_AnchoredPosition: {x: 400, y: 140}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1640828868
 MonoBehaviour:

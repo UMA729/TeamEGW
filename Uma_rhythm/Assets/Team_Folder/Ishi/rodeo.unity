@@ -269,7 +269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 184502073}
   m_Layer: 0
-  m_Name: PtoGPtoG
+  m_Name: WhiteP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -483,8 +483,7 @@ GameObject:
   - component: {fileID: 329224896}
   - component: {fileID: 329224895}
   m_Layer: 0
-  m_Name: "\u771F\u6253\u30A6\u30DE\u30D0\u30B7\u30EA\u6539\uFF11\u767D\u30A6\u30DE
-    (9)"
+  m_Name: "\u767D\u99AC"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -570,7 +569,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329224894}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.62, y: 3.46, z: 0}
+  m_LocalPosition: {x: -3.6, y: 3.46, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 4.055006}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1100,7 +1099,7 @@ GameObject:
   m_Component:
   - component: {fileID: 806342583}
   m_Layer: 0
-  m_Name: PtoG
+  m_Name: pinkP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6757,7 +6756,7 @@ GameObject:
   - component: {fileID: 1663645574}
   - component: {fileID: 1663645573}
   m_Layer: 0
-  m_Name: "\u771F\u6253\u30A6\u30DE\u30D0\u30B7\u30EA\u6539\uFF11 (1)"
+  m_Name: "\u99AC"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6875,8 +6874,7 @@ GameObject:
   - component: {fileID: 1666499277}
   - component: {fileID: 1666499276}
   m_Layer: 0
-  m_Name: "\u771F\u6253\u30A6\u30DE\u30D0\u30B7\u30EA\u6539\uFF11\u6843\u30A6\u30DE
-    (4)"
+  m_Name: "\u6843\u99AC"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6974,7 +6972,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1666499275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 2.5, z: 0}
+  m_LocalPosition: {x: -3.6, y: 2.5, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

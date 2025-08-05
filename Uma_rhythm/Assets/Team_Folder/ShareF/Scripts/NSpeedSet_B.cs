@@ -6,11 +6,12 @@ using UnityEngine.UI;
 
 public class NSpeedSet_B : MonoBehaviour
 {
-    [SerializeField] Button PlusOneB;
-    [SerializeField] Button PlusTenB;
-    [SerializeField] Button MinusOneB;
-    [SerializeField] Button MinusTenB;
-    [SerializeField] Text NotesText;
+    [SerializeField]private Button PlusOneB;
+    [SerializeField]private Button PlusTenB;
+    [SerializeField]private Button MinusOneB;
+    [SerializeField]private Button MinusTenB;
+    [SerializeField]private Text NotesText;
+    string NotesTitle;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +19,9 @@ public class NSpeedSet_B : MonoBehaviour
         PlusTenB = GetComponent<Button>();
         MinusOneB = GetComponent<Button>();
         MinusTenB = GetComponent<Button>();
+        NotesTitle = NotesText.name;
 
-
-        NotesText = GameObject.FindAnyObjectByType<Text>();
+        NotesText = GameObject.Find(NotesTitle).GetComponent<Text>();
 
         NotesText.text = GManager.instance.noteSpeed.ToString();
     }

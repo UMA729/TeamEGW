@@ -237,7 +237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 61060464}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: OffScreenControl1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -306,7 +306,7 @@ GameObject:
   - component: {fileID: 224580828}
   - component: {fileID: 224580827}
   m_Layer: 0
-  m_Name: "\u771F\u6253\u30A6\u30DE\u30D0\u30B7\u30EA\u6539\uFF11\u9ED2\u30A6\u30DE"
+  m_Name: BlackHorse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -412,8 +412,7 @@ GameObject:
   - component: {fileID: 237948689}
   - component: {fileID: 237948688}
   m_Layer: 0
-  m_Name: "\u771F\u6253\u30A6\u30DE\u30D0\u30B7\u30EA\u6539\uFF11\u6843\u30A6\u30DE
-    (4)"
+  m_Name: PinkHorse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1122,7 +1121,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.2738953, y: -1.939209}
+  m_AnchoredPosition: {x: -4.2738647, y: -1.939209}
   m_SizeDelta: {x: -100, y: -56.775635}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &817338327
@@ -1174,7 +1173,7 @@ GameObject:
   - component: {fileID: 818558635}
   - component: {fileID: 818558634}
   m_Layer: 0
-  m_Name: umarnak_test
+  m_Name: UmaBattleSpeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1944,7 +1943,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1786968600}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: OffScreenControl2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

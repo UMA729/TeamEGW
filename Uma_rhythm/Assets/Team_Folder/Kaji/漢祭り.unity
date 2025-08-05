@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 3609712}
   - component: {fileID: 3609711}
   m_Layer: 0
-  m_Name: "\u6F22\u796D\u308A\u7AF6\u99AC\u5834"
+  m_Name: BackImage1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -292,7 +292,7 @@ Transform:
   - {fileID: 237948691}
   - {fileID: 224580829}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &224580826
 GameObject:
@@ -548,7 +548,7 @@ Transform:
   - {fileID: 3609710}
   - {fileID: 1712651435}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &313439856
 GameObject:
@@ -561,7 +561,7 @@ GameObject:
   - component: {fileID: 313439858}
   - component: {fileID: 313439857}
   m_Layer: 0
-  m_Name: 1
+  m_Name: ScoreBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -626,13 +626,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313439856}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.8, y: 6.5, z: 0}
-  m_LocalScale: {x: 9, y: 5, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -296.98633, y: 197.3163, z: -4958.204}
+  m_LocalScale: {x: 455.3453, y: 252.9696, z: 50.59392}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1466424669}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &313946537
 GameObject:
@@ -811,13 +811,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395164930}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: 6.5, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -357.69904, y: 197.3163, z: -4958.204}
+  m_LocalScale: {x: 75.890884, y: 75.890884, z: 50.59392}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_Father: {fileID: 1466424669}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &464534724
 GameObject:
@@ -1380,7 +1380,7 @@ GameObject:
   - component: {fileID: 1239662617}
   - component: {fileID: 1239662616}
   m_Layer: 0
-  m_Name: "\u771F\u6253\u30A6\u30DE\u30D0\u30B7\u30EA\u6539\uFF11 (1)"
+  m_Name: Umazm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1578,7 +1578,7 @@ GameObject:
   - component: {fileID: 1466424667}
   - component: {fileID: 1466424666}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1661,6 +1661,9 @@ RectTransform:
   - {fileID: 1546307043}
   - {fileID: 817338326}
   - {fileID: 1397693540}
+  - {fileID: 1711265430}
+  - {fileID: 313439858}
+  - {fileID: 395164933}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1761,7 +1764,7 @@ GameObject:
   - component: {fileID: 1711265430}
   - component: {fileID: 1711265429}
   m_Layer: 0
-  m_Name: Square
+  m_Name: JudgeBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1826,13 +1829,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1711265428}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4277, z: 0}
-  m_LocalScale: {x: 0.1, y: 3.7, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3.5415745, y: -109.90517, z: -4958.204}
+  m_LocalScale: {x: 5.0593925, y: 187.19751, z: 50.59392}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_Father: {fileID: 1466424669}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1712651434
 GameObject:
@@ -1846,7 +1849,7 @@ GameObject:
   - component: {fileID: 1712651437}
   - component: {fileID: 1712651436}
   m_Layer: 0
-  m_Name: "\u6F22\u796D\u308A\u7AF6\u99AC\u5834 (1)"
+  m_Name: BackImage2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6774,7 +6777,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &1951764363
 GameObject:
